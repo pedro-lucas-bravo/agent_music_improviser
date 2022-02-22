@@ -40,9 +40,20 @@ function addlooper(){
         this.patcher.connect(msg_stop, 0, gateLoopers, 1);
         var msg_clear = this.patcher.getnamed("msg_clear");
         this.patcher.connect(msg_clear, 0, gateLoopers, 1);
-        ///
+        /// Connect to curretn Track
+        var currentTrack = this.patcher.getnamed("current_track");
+        this.patcher.connect(currentTrack, 0, gateLoopers, 0);
+        currentTrack.message("bang");//Bang for choosing the current track
     }else{
         post("Cannot create more than " +maxLoopers+ " loopers.")
+    }
+}
+
+function createloopers(n){
+    if(n < 1) n = 1;
+    if(n > maxLoopers) n = maxLoopers; 
+    for(var i=0;i < n;i++){
+        addlooper();
     }
 }
 
@@ -53,3 +64,14 @@ function removeallloopers(){
     this.patcher.remove(gateLoopers);
     currentLooperIndex = -1;
 }
+
+// var testObj;
+// function test(){
+//     if(testObj != null){
+//         this.patcher.remove(testObj);
+//     }
+//     var currentTrack = this.patcher.getnamed("current_track");
+//     testObj = this.patcher.newdefault(currentTrack.rect[0] + 20, currentTrack.rect[1] + 40, "button");
+//     this.patcher.connect(currentTrack, 0, testObj, 0);  
+//     currentTrack.message("bang");
+// }
