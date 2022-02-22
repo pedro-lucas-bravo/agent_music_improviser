@@ -1,5 +1,5 @@
 {
-	"name" : "AgentMusicImproviser",
+	"name" : "agent_music_imprtoviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
 	"modificationdate" : 3728369452,
