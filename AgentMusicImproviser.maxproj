@@ -2,8 +2,8 @@
 	"name" : "AgentMusicImproviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728365033,
-	"viewrect" : [ 215.0, 164.0, 300.0, 500.0 ],
+	"modificationdate" : 3728369452,
+	"viewrect" : [ 765.0, 165.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -38,10 +38,19 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
+,
+			"DynamicMultitrackController.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
 
 		}
 ,
 		"data" : 		{
+
+		}
+,
+		"other" : 		{
 
 		}
 
@@ -55,7 +64,7 @@
 
 	}
 ,
-	"detailsvisible" : 0,
+	"detailsvisible" : 1,
 	"amxdtype" : 0,
 	"readonly" : 0,
 	"devpathtype" : 0,
