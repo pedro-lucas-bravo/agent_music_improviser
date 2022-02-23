@@ -2,8 +2,8 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728369452,
-	"viewrect" : [ 765.0, 165.0, 300.0, 500.0 ],
+	"modificationdate" : 3728451139,
+	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -43,14 +43,11 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
-
-		}
 ,
-		"data" : 		{
-
-		}
-,
-		"other" : 		{
+			"ButtonGroupControl.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
 
 		}
 
