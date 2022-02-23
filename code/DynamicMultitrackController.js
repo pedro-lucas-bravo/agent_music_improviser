@@ -5,27 +5,28 @@ var gateLoopers;
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
+var soundGens               = new Array(maxLoopers);
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 200;
 var baseTopMargin           = 300;
-var looperBoxLength         = 100;
+var looperBoxLength         = 150;
 
 function addlooper(){        
     if(currentLooperIndex + 1 < maxLoopers){
         currentLooperIndex++;
         //Instance Looper
         loopers[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin, "Looper.maxpat");
+        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, "SoundGenerator.maxpat");
+        this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
          //Remove and Instance or Re-instance gate
         if(currentLooperIndex > 0){
             this.patcher.remove(gateLoopers);
         }
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 50, "gate", currentLooperIndex + 1);
         //Perform connections
-        /// Connect gate to loopers
-        var midiinfo_out = this.patcher.getnamed("midiinfo_out");
+        /// Connect gate to loopers        
         for(var i=0;i<currentLooperIndex + 1;i++){
-            this.patcher.connect(gateLoopers, i, loopers[i], 0);
-            this.patcher.connect(loopers[i], 0, midiinfo_out, 0);
+            this.patcher.connect(gateLoopers, i, loopers[i], 0);   
         }
         /// Connet inputs to gate 
         var midiinfo_in = this.patcher.getnamed("midiinfo_in");
@@ -60,6 +61,7 @@ function createloopers(n){
 function removeallloopers(){
     for(var i=0;i<currentLooperIndex + 1;i++){
         this.patcher.remove(loopers[i]);
+        this.patcher.remove(soundGens[i]);
     }
     this.patcher.remove(gateLoopers);
     currentLooperIndex = -1;

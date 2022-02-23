@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728451139,
+	"modificationdate" : 3728501420,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -27,6 +27,11 @@
 			}
 ,
 			"MultitrackManager.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"SoundGenerator.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
