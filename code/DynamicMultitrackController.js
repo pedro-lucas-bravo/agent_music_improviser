@@ -8,6 +8,7 @@ var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
 var soundGens               = new Array(maxLoopers);
 var msgsOpen                = new Array(maxLoopers);
+var msgsTrackN              = new Array(maxLoopers);
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 200;
 var baseTopMargin           = 300;
@@ -21,10 +22,14 @@ function addlooper(){
         soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, "SoundGenerator.maxpat");
         msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
         msgsOpen[currentLooperIndex].set("open");
+        msgsTrackN[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 100, "message");
+        msgsTrackN[currentLooperIndex].set(currentLooperIndex);
         
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
         this.patcher.connect(loopers[currentLooperIndex], 1, soundGens[currentLooperIndex], 1);
         this.patcher.connect(msgsOpen[currentLooperIndex], 0, soundGens[currentLooperIndex], 2);
+        this.patcher.connect(msgsTrackN[currentLooperIndex], 0, soundGens[currentLooperIndex], 3);
+        msgsTrackN[currentLooperIndex].message("bang");
 
          //Remove and Instance or Re-instance gate
         if(currentLooperIndex > 0){
@@ -69,7 +74,7 @@ function addlooper(){
         this.patcher.connect(currentTrack, 0, gateLoopers, 0);
         currentTrack.message("bang");//Bang for choosing the current track
         /// Connect track to selector
-        this.patcher.connect(currentTrack, 0, pluginSelector, 0);   
+        this.patcher.connect(currentTrack, 0, pluginSelector, 0);        
     }else{
         post("Cannot create more than " +maxLoopers+ " loopers.")
     }
@@ -88,6 +93,7 @@ function removeallloopers(){
         this.patcher.remove(loopers[i]);
         this.patcher.remove(soundGens[i]);
         this.patcher.remove(msgsOpen[i]);
+        this.patcher.remove(msgsTrackN[i]);
     }
     this.patcher.remove(gateLoopers);
     this.patcher.remove(pluginSelector);
