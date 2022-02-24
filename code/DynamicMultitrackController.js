@@ -2,6 +2,7 @@ inlets = 1;
 outlets = 1;
 
 var gateLoopers;
+var pluginSelector; 
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
@@ -22,16 +23,29 @@ function addlooper(){
         msgsOpen[currentLooperIndex].set("open");
         
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
+        this.patcher.connect(loopers[currentLooperIndex], 1, soundGens[currentLooperIndex], 1);
         this.patcher.connect(msgsOpen[currentLooperIndex], 0, soundGens[currentLooperIndex], 2);
 
          //Remove and Instance or Re-instance gate
         if(currentLooperIndex > 0){
             this.patcher.remove(gateLoopers);
+            this.patcher.remove(pluginSelector);
         }
-        gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 50, "gate", currentLooperIndex + 1);
+        gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 1);        
+
+        //Instance pluginSelector
+        var argsPluginselector = new Array(currentLooperIndex + 1);
+        for(var i = 0; i < currentLooperIndex + 1; i++){
+            argsPluginselector[i] = i + 1;   
+        }
+        pluginSelector = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 40, "select", argsPluginselector);
+        for(var i = 0; i < currentLooperIndex + 1; i++){
+            this.patcher.connect(pluginSelector, i, msgsOpen[i], 0);   
+        }        
+
         //Perform connections
         /// Connect gate to loopers        
-        for(var i=0;i<currentLooperIndex + 1;i++){
+        for(var i = 0; i < currentLooperIndex + 1; i++){
             this.patcher.connect(gateLoopers, i, loopers[i], 0);   
         }
         /// Connet inputs to gate 
@@ -49,10 +63,13 @@ function addlooper(){
         this.patcher.connect(msg_stop, 0, gateLoopers, 1);
         var msg_clear = this.patcher.getnamed("msg_clear");
         this.patcher.connect(msg_clear, 0, gateLoopers, 1);
-        /// Connect to curretn Track
+
+        /// Connect to current Track
         var currentTrack = this.patcher.getnamed("current_track");
         this.patcher.connect(currentTrack, 0, gateLoopers, 0);
         currentTrack.message("bang");//Bang for choosing the current track
+        /// Connect track to selector
+        this.patcher.connect(currentTrack, 0, pluginSelector, 0);   
     }else{
         post("Cannot create more than " +maxLoopers+ " loopers.")
     }
@@ -73,6 +90,7 @@ function removeallloopers(){
         this.patcher.remove(msgsOpen[i]);
     }
     this.patcher.remove(gateLoopers);
+    this.patcher.remove(pluginSelector);
     currentLooperIndex = -1;
 }
 

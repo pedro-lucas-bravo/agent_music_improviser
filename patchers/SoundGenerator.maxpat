@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 443.0, 236.0, 643.0, 480.0 ],
+		"rect" : [ 389.0, 192.0, 643.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -66,7 +66,7 @@
 				"box" : 				{
 					"comment" : "Open Synthe",
 					"id" : "obj-8",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -103,7 +103,7 @@
 				"box" : 				{
 					"comment" : "Midi Flush",
 					"id" : "obj-19",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -128,7 +128,7 @@
 				"box" : 				{
 					"comment" : "Notes on-off list",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -373,6 +373,25 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-65" : [ "live.gain~[8]", "live.gain~", 0 ],
+			"obj-68" : [ "vst~[8]", "vst~", 0 ],
+			"parameterbanks" : 			{
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "Hybrid_20220224_2.maxsnap",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/data",
+				"patcherrelativepath" : "../data",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "11patcher",
 				"default" : 				{

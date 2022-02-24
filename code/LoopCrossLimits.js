@@ -1,5 +1,5 @@
 inlets 	= 1
-outlets = 1;
+outlets = 2;
 
 //States
 var None_St 				= 0;
@@ -71,6 +71,7 @@ function transportdata(beats, units, resolution){
 				var deltaStart = startLoopTime - startRecordTime;
 				if(currentTime >= (endLoopTime - deltaStart + firstEventTime)){
 					aheadTime = currentTime - (endLoopTime - deltaStart + firstEventTime);
+					outlet(1,"looppoint");
 					if(aheadTime > 0){
 						outlet(0,["playatms", firstEventTime + aheadTime]);						
 					}else{
@@ -83,8 +84,9 @@ function transportdata(beats, units, resolution){
 			}
 			break;
 		case Playing_St:
-			if(currentTime > startLoopTime)
+			if(currentTime > startLoopTime){				
 				state = CheckingLoop_St;
+			}
 			break;
 	}
 }
