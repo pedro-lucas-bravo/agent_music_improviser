@@ -6,6 +6,7 @@ var gateLoopers;
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
 var soundGens               = new Array(maxLoopers);
+var msgsOpen                = new Array(maxLoopers);
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 200;
 var baseTopMargin           = 300;
@@ -17,7 +18,12 @@ function addlooper(){
         //Instance Looper
         loopers[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin, "Looper.maxpat");
         soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, "SoundGenerator.maxpat");
+        msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
+        msgsOpen[currentLooperIndex].set("open");
+        
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
+        this.patcher.connect(msgsOpen[currentLooperIndex], 0, soundGens[currentLooperIndex], 2);
+
          //Remove and Instance or Re-instance gate
         if(currentLooperIndex > 0){
             this.patcher.remove(gateLoopers);
@@ -31,6 +37,8 @@ function addlooper(){
         /// Connet inputs to gate 
         var midiinfo_in = this.patcher.getnamed("midiinfo_in");
         this.patcher.connect(midiinfo_in, 0, gateLoopers, 1);
+        var midiinfo_in_key = this.patcher.getnamed("midiinfo_in_key");
+        this.patcher.connect(midiinfo_in_key, 0, gateLoopers, 1);
         var msg_startrecord = this.patcher.getnamed("msg_startrecord");
         this.patcher.connect(msg_startrecord, 0, gateLoopers, 1);
         var msg_endrecord = this.patcher.getnamed("msg_endrecord");
@@ -62,6 +70,7 @@ function removeallloopers(){
     for(var i=0;i<currentLooperIndex + 1;i++){
         this.patcher.remove(loopers[i]);
         this.patcher.remove(soundGens[i]);
+        this.patcher.remove(msgsOpen[i]);
     }
     this.patcher.remove(gateLoopers);
     currentLooperIndex = -1;
