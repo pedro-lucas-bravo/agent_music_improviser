@@ -2,7 +2,8 @@ inlets = 1;
 outlets = 1;
 
 var gateLoopers;
-var pluginSelector; 
+var pluginSelector;
+var loadBang;
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
@@ -19,10 +20,10 @@ function addlooper(){
         currentLooperIndex++;
         //Instance Looper
         loopers[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin, "Looper.maxpat");
-        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, "SoundGenerator.maxpat");
-        msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
+        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 120, "SoundGenerator.maxpat");
+        msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, "message");
         msgsOpen[currentLooperIndex].set("open");
-        msgsTrackN[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 100, "message");
+        msgsTrackN[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
         msgsTrackN[currentLooperIndex].set(currentLooperIndex);
         
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
@@ -35,8 +36,10 @@ function addlooper(){
         if(currentLooperIndex > 0){
             this.patcher.remove(gateLoopers);
             this.patcher.remove(pluginSelector);
+            this.patcher.remove(loadBang);
         }
-        gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 1);        
+        gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 1);
+        loadBang = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 120, "loadbang");        
 
         //Instance pluginSelector
         var argsPluginselector = new Array(currentLooperIndex + 1);
@@ -49,9 +52,10 @@ function addlooper(){
         }        
 
         //Perform connections
-        /// Connect gate to loopers        
+        /// Connect gate to loopers and loadbang to msgsTrackN  
         for(var i = 0; i < currentLooperIndex + 1; i++){
             this.patcher.connect(gateLoopers, i, loopers[i], 0);   
+            this.patcher.connect(loadBang, 0, msgsTrackN[i], 0);
         }
         /// Connet inputs to gate 
         var midiinfo_in = this.patcher.getnamed("midiinfo_in");
