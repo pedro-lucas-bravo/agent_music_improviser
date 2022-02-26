@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728722062,
+	"modificationdate" : 3728742292,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -16,17 +16,17 @@
 				"toplevel" : 1
 			}
 ,
-			"Looper.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"ClockClick.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"LoopSynchronizer.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"Looper.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -40,21 +40,26 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"Spatializer.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
 		"code" : 		{
-			"LoopCrossLimits.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
 			"ButtonGroupControl.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
 			"DynamicMultitrackController.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"LoopCrossLimits.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
