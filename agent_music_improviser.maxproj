@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728716930,
+	"modificationdate" : 3728722062,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -10,10 +10,15 @@
 	"autolocalize" : 0,
 	"contents" : 	{
 		"patchers" : 		{
-			"Looper.maxpat" : 			{
+			"MultitrackManager.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"Looper.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"ClockClick.maxpat" : 			{
@@ -26,12 +31,12 @@
 				"local" : 1
 			}
 ,
-			"MultitrackManager.maxpat" : 			{
+			"SoundGenerator.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"SoundGenerator.maxpat" : 			{
+			"AgentController.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -53,6 +58,10 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
+
+		}
+,
+		"data" : 		{
 
 		}
 
