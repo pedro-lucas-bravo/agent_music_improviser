@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728501420,
+	"modificationdate" : 3728716930,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -44,12 +44,12 @@
 				"local" : 1
 			}
 ,
-			"DynamicMultitrackController.js" : 			{
+			"ButtonGroupControl.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
-			"ButtonGroupControl.js" : 			{
+			"DynamicMultitrackController.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
