@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 170.0, 86.0, 942.0, 713.0 ],
+		"rect" : [ 93.0, 126.0, 942.0, 612.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -61,7 +61,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 246.0, 419.0, 129.0, 22.0 ],
+					"patching_rect" : [ 149.0, 494.0, 129.0, 22.0 ],
 					"text" : "/source/1/xyz $1 $2 $3"
 				}
 
@@ -82,7 +82,7 @@
 				"box" : 				{
 					"comment" : "Mode: 1 binaural, 2 Ambisonic",
 					"id" : "obj-53",
-					"index" : 0,
+					"index" : 4,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -339,7 +339,7 @@
 				"box" : 				{
 					"comment" : "List offset XYZ In Millimetrs",
 					"id" : "obj-26",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -449,7 +449,7 @@
 				"box" : 				{
 					"comment" : "List position XYZ In Millimetrs",
 					"id" : "obj-13",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -474,11 +474,11 @@
 				"box" : 				{
 					"comment" : "Signal Input~",
 					"id" : "obj-7",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 40.0, 57.0, 30.0, 30.0 ],
 					"varname" : "SignalInput~"
 				}
@@ -952,7 +952,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-48", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-54", 0 ]
 				}
 
@@ -986,24 +986,6 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "spat5.binaural~.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "spat5.oper.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "spat5.spat~.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "spat5.viewer.mxe64",
-				"type" : "mx64"
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{

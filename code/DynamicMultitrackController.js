@@ -2,6 +2,7 @@ inlets = 1;
 outlets = 1;
 
 var gateLoopers;
+var gatePositions;
 var pluginSelector;
 var loadBang;
 var loadBangTrigger;
@@ -16,7 +17,7 @@ var msgsSave                = new Array(maxLoopers);
 var msgsLoad                = new Array(maxLoopers);
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 200;
-var baseTopMargin           = 350;
+var baseTopMargin           = 500;
 var looperBoxLength         = 150;
 
 function addlooper(){        
@@ -43,16 +44,19 @@ function addlooper(){
         this.patcher.connect(msgsLoad[currentLooperIndex], 0, soundGens[currentLooperIndex], 4);        
 
         msgsTrackN[currentLooperIndex].message("bang");
+        msgsLoad[currentLooperIndex].message("bang");
 
          //Remove and Instance or Re-instance gate
         if(currentLooperIndex > 0){
             this.patcher.remove(gateLoopers);
+            this.patcher.remove(gatePositions);
             this.patcher.remove(pluginSelector);
             this.patcher.remove(loadBang);
             this.patcher.remove(loadBangTrigger);
             this.patcher.remove(closeBang);
         }
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 1);
+        gatePositions = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5 + looperBoxLength, baseTopMargin - 80, "gate", currentLooperIndex + 1);
         loadBang = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 160, "loadbang");        
         loadBangTrigger = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 120, "t b b");        
         this.patcher.connect(loadBang, 0, loadBangTrigger, 0);
@@ -87,19 +91,29 @@ function addlooper(){
 
         /// Connect to current Track
         var currentTrack = this.patcher.getnamed("current_track");
-        this.patcher.connect(currentTrack, 0, gateLoopers, 0);
-        currentTrack.message("bang");//Bang for choosing the current track
+        this.patcher.connect(currentTrack, 0, gateLoopers, 0);       
 
         /// Connect track to selector
         this.patcher.connect(currentTrack, 0, pluginSelector, 0);
 
+        /// Connect track to gate positions
+        this.patcher.connect(currentTrack, 0, gatePositions, 0);
+
+        /// Connect positions source to gate positions
+        var inlet_positions = this.patcher.getnamed("inlet_positions");
+        this.patcher.connect(inlet_positions, 0, gatePositions, 1);
+
         /// Connect individual elements  
         for(var i = 0; i < currentLooperIndex + 1; i++){
             this.patcher.connect(gateLoopers, i, loopers[i], 0);   
+            this.patcher.connect(gatePositions, i, soundGens[i],5);
             this.patcher.connect(loadBangTrigger, 0, msgsLoad[i], 0);
             this.patcher.connect(loadBangTrigger, 1, msgsTrackN[i], 0);
             this.patcher.connect(closeBang, 0, msgsSave[i], 0);
         }  
+
+        //Bang for choosing the current track
+        currentTrack.message("bang");
     }else{
         post("Cannot create more than " +maxLoopers+ " loopers.")
     }
@@ -123,9 +137,11 @@ function removeallloopers(){
         this.patcher.remove(msgsLoad[i]);
     }
     this.patcher.remove(gateLoopers);
+    this.patcher.remove(gatePositions);
     this.patcher.remove(pluginSelector);
     this.patcher.remove(loadBang);
     this.patcher.remove(loadBangTrigger);
+    this.patcher.remove(closeBang);
     currentLooperIndex = -1;
     gc();
 }
