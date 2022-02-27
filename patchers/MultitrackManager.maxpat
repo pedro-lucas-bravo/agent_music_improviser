@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 84.0, 1126.0, 699.0 ],
+		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1663,7 +1663,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 222.0, 93.0, 50.0, 22.0 ],
-									"text" : "25 0"
+									"text" : "24 0"
 								}
 
 							}
@@ -4249,28 +4249,28 @@
 		"parameters" : 		{
 			"obj-40::obj-65" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-40::obj-68" : [ "vst~[8]", "vst~", 0 ],
-			"obj-53::obj-65" : [ "live.gain~[2]", "live.gain~", 0 ],
-			"obj-53::obj-68" : [ "vst~[1]", "vst~", 0 ],
-			"obj-64::obj-65" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-64::obj-68" : [ "vst~[2]", "vst~", 0 ],
+			"obj-53::obj-65" : [ "live.gain~[5]", "live.gain~", 0 ],
+			"obj-53::obj-68" : [ "vst~[3]", "vst~", 0 ],
+			"obj-64::obj-65" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-64::obj-68" : [ "vst~[4]", "vst~", 0 ],
 			"obj-67" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
-			"obj-80::obj-65" : [ "live.gain~[4]", "live.gain~", 0 ],
-			"obj-80::obj-68" : [ "vst~[3]", "vst~", 0 ],
+			"obj-80::obj-65" : [ "live.gain~[9]", "live.gain~", 0 ],
+			"obj-80::obj-68" : [ "vst~[5]", "vst~", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
 				"obj-53::obj-65" : 				{
-					"parameter_longname" : "live.gain~[2]"
+					"parameter_longname" : "live.gain~[5]"
 				}
 ,
 				"obj-64::obj-65" : 				{
-					"parameter_longname" : "live.gain~[3]"
+					"parameter_longname" : "live.gain~[6]"
 				}
 ,
 				"obj-80::obj-65" : 				{
-					"parameter_longname" : "live.gain~[4]"
+					"parameter_longname" : "live.gain~[9]"
 				}
 
 			}
@@ -4335,10 +4335,33 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "Spatializer.maxpat",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "openTransport.maxpat",
 				"bootpath" : "C74:/help/max",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "spat5.binaural~.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "spat5.oper.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "spat5.spat~.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "spat5.viewer.mxe64",
+				"type" : "mx64"
 			}
  ],
 		"autosave" : 0,
