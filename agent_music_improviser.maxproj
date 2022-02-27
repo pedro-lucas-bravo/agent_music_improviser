@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728820771,
+	"modificationdate" : 3728844536,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -31,6 +31,11 @@
 				"local" : 1
 			}
 ,
+			"PositionSensor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"SoundGenerator.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -47,11 +52,6 @@
 			}
 ,
 			"MainController.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"PositionSensor.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -75,6 +75,11 @@
 			}
 ,
 			"LooperDictHandler.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"AgentController.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
