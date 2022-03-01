@@ -1,7 +1,8 @@
-include("Vector")
+include("Vector");
+include("AgentAutonomousMovement");
 
 inlets = 1;
-outlets = 1;
+outlets = 3;
 
 //Initialize variables and constants
 var maxAgents             = 128;
@@ -13,18 +14,17 @@ var agent_released_state  = 2;
 var currentAgentID        = -1;
 var agentCollectionSize   = 0;
 
-var moveTask              = new Task(UpdateMovement, this);
+var mainAgentsTask        = new Task(UpdateAgents, this);
 var deltaTime             = 30;
-var speed                 = 20
+//var speed                 = 20
 
 //Initialize agents
 for(var i = 0; i < maxAgents; i++){
     agents[i] = {
-        "id"        : i,
-        "position"  : new Vector(0.0, 0.0, 0.0),
-        "polar"     : new Vector (0.0, 0.0, 1.0), // aed
-        "laststate" : agent_empty_state,
-        "state"     : agent_empty_state
+        id        : i,
+        position  : new Vector(0.0, 1.0, 0.0),
+        laststate : agent_empty_state,
+        state     : agent_empty_state
     };
 }
 
@@ -34,11 +34,18 @@ function ChangeAgentState(agentId, newState){
 }
 
 //INITIALIZATION
-create();
-select(0);
-
+function loadbang(){
+    create();
+    select(0);
+}
 
 //FUCNTIONS
+function startbehavior(){
+    mainAgentsTask.cancel();
+    mainAgentsTask.interval = deltaTime;
+    mainAgentsTask.repeat();
+}
+
 function create(){    
     if(agentCollectionSize + 1 <= maxAgents){
         currentAgentID = agentCollectionSize;
@@ -98,7 +105,7 @@ function lock(agentId){//Lock is performed when agent is caught
 }
 
 function stop(){
-    moveTask.cancel();
+    mainAgentsTask.cancel();
 }
 
 function restart(){
@@ -108,18 +115,25 @@ function restart(){
     select(0);
 }
 
-function UpdateMovement(){
-    var dt = deltaTime * 0.001;
-    for(var i = 0; i < 5; i++){
-        agents[i].polar.x += dt * speed * Math.PI / 180.0;
-        if(agents[i].polar.x >= 2.0 * Math.PI)
-            agents[i].polar.x = 0.0;
-        
-        agents[i].position.x =  agents[i].polar.z * Math.cos(agents[i].polar.x);
-        agents[i].position.y =  agents[i].polar.z * Math.sin(agents[i].polar.x);
-        agents[i].position.z =  i;
+///////// AGENTS BEHAVIOUR
 
-        outlet(0, ["agent" + i, agents[i].position.x * 1000, agents[i].position.y * 1000, agents[i].position.z * 1000]);
+function UpdateAgents(){
+    var dt = deltaTime * 0.001;
+    var allPositions = ["/agents"];
+    for(var i = 0; i < agentCollectionSize; i++){
+        switch(agents[i].state){
+            case agent_released_state:
+                var position = agents[i].position = MoveAgent(i, dt, agents[i].position);
+                var positionMM = [parseInt(position.x * 1000), parseInt(position.y * 1000), parseInt(position.z * 1000)];
+                outlet(1, ["agent", i, positionMM[0], positionMM[1], positionMM[2]]);
+                allPositions = allPositions.concat(positionMM);
+            break;
+        }        
+    }    
+    if(agentCollectionSize > 0 && allPositions.length > 1){
+        //post(allPositions + ' size ' + allPositions.length);
+        outlet(2, allPositions);
     }
 }
-UpdateMovement.local = 1;
+UpdateAgents.local = 1;
+
