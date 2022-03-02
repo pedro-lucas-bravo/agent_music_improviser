@@ -18,6 +18,7 @@ var msgsSave                = new Array(maxLoopers);
 var msgsLoad                = new Array(maxLoopers);
 var agentDataSelector       = new Array(maxLoopers);
 var msgsAgentPosition       = new Array(maxLoopers);
+var msgsOpenSpat            = new Array(maxLoopers);
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 450;
 var baseTopMargin           = 500;
@@ -28,7 +29,7 @@ function addlooper(){
         currentLooperIndex++;
         //Instance Looper
         loopers[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin, "Looper.maxpat");
-        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 240, "SoundGenerator.maxpat");        
+        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 280, "SoundGenerator.maxpat");        
         msgsTrackN[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, 30, 10);
         msgsTrackN[currentLooperIndex].set(currentLooperIndex);
         //msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
@@ -41,6 +42,9 @@ function addlooper(){
 
         agentDataSelector[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 160, "select " + currentLooperIndex);
         msgsAgentPosition[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 200, 100, 10);        
+
+        msgsOpenSpat[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 240, 80, 10);
+        msgsOpenSpat[currentLooperIndex].set("/window/open");
         
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
         this.patcher.connect(loopers[currentLooperIndex], 1, soundGens[currentLooperIndex], 1);
@@ -51,6 +55,7 @@ function addlooper(){
         this.patcher.connect(msgsLoad[currentLooperIndex], 0, soundGens[currentLooperIndex], 4);
         this.patcher.connect(agentDataSelector[currentLooperIndex], 0, msgsAgentPosition[currentLooperIndex], 0);
         this.patcher.connect(msgsAgentPosition[currentLooperIndex], 0, soundGens[currentLooperIndex], 5);
+        this.patcher.connect(msgsOpenSpat[currentLooperIndex], 0, soundGens[currentLooperIndex], 6);
 
         msgsTrackN[currentLooperIndex].message("bang");
         msgsLoad[currentLooperIndex].message("bang");
@@ -157,6 +162,7 @@ function removeallloopers(){
         this.patcher.remove(msgsLoad[i]);
         this.patcher.remove(agentDataSelector[i]);
         this.patcher.remove(msgsAgentPosition[i]);
+        this.patcher.remove(msgsOpenSpat[i]);
     }
     this.patcher.remove(gateLoopers);
     this.patcher.remove(gatePositions);
