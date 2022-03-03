@@ -66,6 +66,11 @@ Vector.prototype = {
     clone: function() {
       return new Vector(this.x, this.y, this.z);
     },
+    set: function(other){
+      this.x = other.x;
+      this.y = other.y;
+      this.z = other.z;
+    },
     init: function(x, y, z) {
       this.x = x; this.y = y; this.z = z;
       return this;

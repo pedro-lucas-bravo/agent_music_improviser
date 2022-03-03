@@ -18,6 +18,8 @@ var mainAgentsTask        = new Task(UpdateAgents, this);
 var deltaTime             = 30;
 //var speed                 = 20
 
+var currentPositionSensor = new Vector(0.0, 0.0, 0.0);  
+
 //Initialize agents
 for(var i = 0; i < maxAgents; i++){
     agents[i] = {
@@ -35,12 +37,15 @@ function loadbang(){
     restart();
 }
 
-//FUNCTIONS
+//AGENT INTERFACE
 
 function ChangeAgentState(agentId, newState){
     if(agentId < agentCollectionSize){
         agents[agentId].laststate = agents[agentId].state;
-        agents[agentId].state = newState; 
+        agents[agentId].state = newState;
+        if(newState == agent_released_state){//Set current position as initial one
+            agents[agentId].position.set(currentPositionSensor);
+        }
     }
 }
 
@@ -130,6 +135,15 @@ function restart(){
     create();
     select(0);
     startbehavior();
+}
+
+function list(val){
+    if(arguments.length == 3){//If list is 3 elements, it is a position vector
+        //IMPORTANT: It is assumed that value are received in milimeters, so it converts to meters
+        currentPositionSensor.x = arguments[0] * 0.001;
+        currentPositionSensor.y = arguments[1] * 0.001;
+        currentPositionSensor.z = arguments[2] * 0.001;
+    }    
 }
 
 ///////// AGENTS BEHAVIOUR

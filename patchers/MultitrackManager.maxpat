@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 84.0, 1208.0, 713.0 ],
+		"rect" : [ 41.0, 84.0, 1208.0, 699.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -293,7 +293,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1094.0, 236.0, 82.0, 22.0 ],
+					"patching_rect" : [ 191.0, 289.0, 82.0, 22.0 ],
 					"text" : "/window/open"
 				}
 
@@ -305,7 +305,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1045.0, 269.0, 131.0, 22.0 ],
+					"patching_rect" : [ 142.0, 322.0, 131.0, 22.0 ],
 					"text" : "PositionSensor.maxpat",
 					"varname" : "inlet_positions"
 				}
@@ -3400,7 +3400,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.5, 86.0, 50.0, 22.0 ],
-									"text" : "3"
+									"text" : "1"
 								}
 
 							}
@@ -3761,7 +3761,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 450.0, 700.0, 100.0, 20.0 ],
-					"text" : "368 -929 0"
+					"text" : "1266 -851 0"
 				}
 
 			}
@@ -3880,7 +3880,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 600.0, 700.0, 100.0, 20.0 ],
-					"text" : "368 -929 0"
+					"text" : "1266 -851 0"
 				}
 
 			}
@@ -3999,7 +3999,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 750.0, 700.0, 100.0, 20.0 ],
-					"text" : "368 -929 0"
+					"text" : "1266 -851 0"
 				}
 
 			}
@@ -4118,7 +4118,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 900.0, 700.0, 100.0, 20.0 ],
-					"text" : "368 -929 0"
+					"text" : "1266 -851 0"
 				}
 
 			}
@@ -4371,7 +4371,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"order" : 1,
+					"source" : [ "obj-178", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-996", 1 ],
+					"order" : 0,
 					"source" : [ "obj-178", 0 ]
 				}
 
