@@ -2,7 +2,7 @@ include("Vector");
 include("AgentAutonomousMovement");
 
 inlets = 1;
-outlets = 3;
+outlets = 4;
 
 //Initialize variables and constants
 var maxAgents             = 128;
@@ -26,7 +26,8 @@ for(var i = 0; i < maxAgents; i++){
         id        : i,
         position  : new Vector(0.0, 1.0, 0.0),
         laststate : agent_empty_state,
-        state     : agent_empty_state
+        state     : agent_empty_state,
+        color     : new Vector(0.490196, 1.0, 0.0)// Default color from spat (kind of green)
     };
 }
 
@@ -144,6 +145,26 @@ function list(val){
         currentPositionSensor.y = arguments[1] * 0.001;
         currentPositionSensor.z = arguments[2] * 0.001;
     }    
+}
+
+function GenerateColors(){
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    var lastOne = 0;
+    for(var i = 0; i < agents.length; i++){
+        //Try to get bright colors by keeping one component in zero and other in one
+        var toOne = getRndInteger(0, 2);        
+        lastOne = toOne = toOne == lastOne ? (toOne + 1) % 3 : toOne;
+        post(toOne);
+        var toZero  = getRndInteger(0, 2);
+        toZero = toZero == toOne ? (toZero + 1) % 3 : toZero;
+        agents[i].color.x = toOne == 0 ? 1.0 : (toZero == 0 ? 0 : getRndInteger(0, 255) / 255.0);
+        agents[i].color.y = toOne == 1 ? 1.0 : (toZero == 1 ? 0 : getRndInteger(0, 255) / 255.0);
+        agents[i].color.z = toOne == 2 ? 1.0 : (toZero == 2 ? 0 : getRndInteger(0, 255) / 255.0);
+        outlet(3, i + 1);
+        outlet(3, ["/source/1/color", agents[i].color.x, agents[i].color.y, agents[i].color.z, 1.0]);
+    }
 }
 
 ///////// AGENTS BEHAVIOUR

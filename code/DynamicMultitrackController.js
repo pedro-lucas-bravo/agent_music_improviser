@@ -8,6 +8,7 @@ var loadBang;
 var loadBangTrigger;
 var closeBang;
 var msgClearAll;
+var msgStopAll;
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
@@ -69,6 +70,7 @@ function addlooper(){
             this.patcher.remove(loadBangTrigger);
             this.patcher.remove(closeBang);
             this.patcher.remove(msgClearAll);
+            this.patcher.remove(msgStopAll);
         }
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 2);
         gatePositions = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5 + looperBoxLength, baseTopMargin - 80, "gate", currentLooperIndex + 2);
@@ -76,8 +78,10 @@ function addlooper(){
         loadBangTrigger = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 120, "t b b");        
         this.patcher.connect(loadBang, 0, loadBangTrigger, 0);
         closeBang = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin + 80, "closebang");
-        msgClearAll = this.patcher.newobject("message", baseLeftMargin, baseTopMargin -80, 35, 10);
+        msgClearAll = this.patcher.newobject("message", baseLeftMargin + 40, baseTopMargin -80, 35, 10);
         msgClearAll.set("clear");
+        msgStopAll = this.patcher.newobject("message", baseLeftMargin, baseTopMargin -80, 35, 10);
+        msgStopAll.set("stop");
 
         //Instance pluginSelector
         var argsPluginselector = new Array(currentLooperIndex + 1);
@@ -135,6 +139,7 @@ function addlooper(){
             this.patcher.connect(loadBangTrigger, 1, msgsTrackN[i], 0);
             this.patcher.connect(closeBang, 0, msgsSave[i], 0);
             this.patcher.connect(msgClearAll, 0, loopers[i], 0);
+            this.patcher.connect(msgStopAll, 0, loopers[i], 0);
         }  
 
         //Bang for choosing the current track
@@ -171,6 +176,7 @@ function removeallloopers(){
     this.patcher.remove(loadBangTrigger);
     this.patcher.remove(closeBang);
     this.patcher.remove(msgClearAll);
+    this.patcher.remove(msgStopAll);
     currentLooperIndex = -1;
     gc();
 }
