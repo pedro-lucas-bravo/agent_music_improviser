@@ -155,8 +155,7 @@ function GenerateColors(){
     for(var i = 0; i < agents.length; i++){
         //Try to get bright colors by keeping one component in zero and other in one
         var toOne = getRndInteger(0, 2);        
-        lastOne = toOne = toOne == lastOne ? (toOne + 1) % 3 : toOne;
-        post(toOne);
+        lastOne = toOne = toOne == lastOne ? (toOne + 1) % 3 : toOne;        
         var toZero  = getRndInteger(0, 2);
         toZero = toZero == toOne ? (toZero + 1) % 3 : toZero;
         agents[i].color.x = toOne == 0 ? 1.0 : (toZero == 0 ? 0 : getRndInteger(0, 255) / 255.0);
