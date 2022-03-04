@@ -213,19 +213,21 @@ function UpdateAgents(){
     }
 
     //For all agents
-    var allPositions = ["/agents"];
+    var allPositions = ["/agents", agentCollectionSize];
+    var releasedAgents = 0;
     for(var i = 0; i < agentCollectionSize; i++){
         switch(agents[i].state){
             case agent_released_state:
                 var position = agents[i].position = MoveAgent(i, dt, agents[i].position);
-                var positionMM = [parseInt(position.x * 1000), parseInt(position.y * 1000), parseInt(position.z * 1000)];
-                outlet(1, ["agent", i, positionMM[0], positionMM[1], positionMM[2]]);
+                var positionMM = [i, Math.round(position.x * 1000), Math.round(position.y * 1000), Math.round(position.z * 1000)];
+                outlet(1, ["agent", i, positionMM[1], positionMM[2], positionMM[3]]);
                 allPositions = allPositions.concat(positionMM);
+                releasedAgents++;
             break;
         }        
-    }    
-    if(agentCollectionSize > 0 && allPositions.length > 1){
-        //post(allPositions + ' size ' + allPositions.length);
+    }       
+    if(releasedAgents > 0){
+        allPositions[1] = releasedAgents;
         outlet(2, allPositions);
     }
 }
