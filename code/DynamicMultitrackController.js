@@ -23,8 +23,8 @@ var agentDataSelector       = new Array(maxLoopers);
 var msgsAgentPosition       = new Array(maxLoopers);
 var msgsOpenSpat            = new Array(maxLoopers);
 var currentLooperIndex      = -1;
-var baseLeftMargin          = 450;
-var baseTopMargin           = 500;
+var baseLeftMargin          = 600;
+var baseTopMargin           = 450;
 var looperBoxLength         = 150;
 
 function addlooper(){        

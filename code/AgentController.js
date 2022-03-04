@@ -2,7 +2,7 @@ include("Vector");
 include("AgentAutonomousMovement");
 
 inlets = 1;
-outlets = 4;
+outlets = 6;
 
 //Initialize variables and constants
 var maxAgents             = 128;
@@ -166,10 +166,53 @@ function GenerateColors(){
     }
 }
 
+function instanceExternalAgents(size){
+    size = Math.min(size, maxAgents);
+    var msg = ["/agent/instance", size]
+    for(var i = 0; i < size; i++){
+        msg = msg.concat(
+            [
+                agents[i].state,
+                rgbToHex(
+                    parseInt(agents[i].color.x * 255), 
+                    parseInt(agents[i].color.y * 255), 
+                    parseInt(agents[i].color.z * 255), 
+                    false
+                    )
+            ]
+                );
+    }
+    outlet(4, msg);
+}
+
+//https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+componentToHex.local = 1;
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+  
+rgbToHex.local = 1;
+function rgbToHex(r, g, b, includeSharp) {
+    var result = componentToHex(r) + componentToHex(g) + componentToHex(b);    
+    return includeSharp ? "#" + result : result;
+}
+
 ///////// AGENTS BEHAVIOUR
 
 function UpdateAgents(){
     var dt = deltaTime * 0.001;
+    //For position sensor
+    if(currentAgentID >= 0){
+        outlet(5, ["/sensor/position", 
+                                        currentAgentID, 
+                                        Math.round(currentPositionSensor.x * 1000), 
+                                        Math.round(currentPositionSensor.y * 1000), 
+                                        Math.round(currentPositionSensor.z * 1000)
+                                    ]);
+    }
+
+    //For all agents
     var allPositions = ["/agents"];
     for(var i = 0; i < agentCollectionSize; i++){
         switch(agents[i].state){
