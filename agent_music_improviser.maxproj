@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3728844536,
+	"modificationdate" : 3729312836,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -55,10 +55,19 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"SpatialAudioTest.maxpat" : 			{
+				"kind" : "patcher"
+			}
 
 		}
 ,
 		"code" : 		{
+			"AgentController.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"ButtonGroupControl.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -75,11 +84,6 @@
 			}
 ,
 			"LooperDictHandler.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"AgentController.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

@@ -76,6 +76,7 @@ function addlooper(){
             this.patcher.remove(routeSpatMsgs);
             this.patcher.remove(gateSpatMsgs); 
         }
+
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 2);
         gatePositions = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5 + looperBoxLength, baseTopMargin - 80, "gate", currentLooperIndex + 2);
         loadBang = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 160, "loadbang");        
@@ -94,7 +95,10 @@ function addlooper(){
         this.patcher.connect(agentController, 3, routeSpatMsgs, 0);
         this.patcher.connect(routeSpatMsgs, 0, gateSpatMsgs, 0);
         this.patcher.connect(routeSpatMsgs, 1, gateSpatMsgs, 1);
-
+        var msgSpBinaural = this.patcher.getnamed("sp_binaural");
+        var msgSpAmbisonic = this.patcher.getnamed("sp_ambisonic");
+        this.patcher.connect(msgSpBinaural, 0, soundGens[currentLooperIndex], 7);
+        this.patcher.connect(msgSpAmbisonic, 0, soundGens[currentLooperIndex], 7);
 
         //Instance pluginSelector
         var argsPluginselector = new Array(currentLooperIndex + 1);
