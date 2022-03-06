@@ -77,6 +77,7 @@ function create(){
 function select(agentId){
     currentAgentID = agentId;
     outlet(0, ["select", agentId]);
+    SendPositionToAgent(currentAgentID, currentPositionSensor);
 }
 
 function release(agentId){
@@ -154,6 +155,13 @@ function list(val){
     }    
 }
 
+function SendPositionToAgent(agentId, position){
+    var positionMM = [agentId, Math.round(position.x * 1000), Math.round(position.y * 1000), Math.round(position.z * 1000)];
+    outlet(1, ["agent", agentId, positionMM[1], positionMM[2], positionMM[3]]);
+    return positionMM;
+}
+SendPositionToAgent.local = 1;
+
 function GenerateColors(){
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -165,9 +173,10 @@ function GenerateColors(){
         lastOne = toOne = toOne == lastOne ? (toOne + 1) % 3 : toOne;        
         var toZero  = getRndInteger(0, 2);
         toZero = toZero == toOne ? (toZero + 1) % 3 : toZero;
-        agents[i].color.x = toOne == 0 ? 1.0 : (toZero == 0 ? 0 : getRndInteger(0, 255) / 255.0);
-        agents[i].color.y = toOne == 1 ? 1.0 : (toZero == 1 ? 0 : getRndInteger(0, 255) / 255.0);
-        agents[i].color.z = toOne == 2 ? 1.0 : (toZero == 2 ? 0 : getRndInteger(0, 255) / 255.0);
+        var toRand = getRndInteger(0, 4) / 4.0;
+        agents[i].color.x = toOne == 0 ? 1.0 : (toZero == 0 ? 0 : toRand);
+        agents[i].color.y = toOne == 1 ? 1.0 : (toZero == 1 ? 0 : toRand);
+        agents[i].color.z = toOne == 2 ? 1.0 : (toZero == 2 ? 0 : toRand);
         outlet(3, i + 1);
         outlet(3, ["/source/1/color", agents[i].color.x, agents[i].color.y, agents[i].color.z, 1.0]);
     }
@@ -239,8 +248,7 @@ function UpdateAgents(){
         switch(agents[i].state){
             case agent_released_state:
                 var position = agents[i].position = MoveAgent(i, dt, agents[i].position);
-                var positionMM = [i, Math.round(position.x * 1000), Math.round(position.y * 1000), Math.round(position.z * 1000)];
-                outlet(1, ["agent", i, positionMM[1], positionMM[2], positionMM[3]]);
+                var positionMM = SendPositionToAgent(i, position);
                 allAgentsInfo = allAgentsInfo.concat(positionMM);
                 releasedAgents++;
             break;
