@@ -2,7 +2,14 @@ include("Vector");
 include("AgentAutonomousMovement");
 
 inlets = 1;
-outlets = 6;
+outlets = 5;
+////outet description
+// 0: For 'select' message 
+// 1: For individual agent position (millimeters) message 'agent id x y z' (e.g. agent 0 100 150 230)
+// 2: (Rewrite to all agents) For all released agents position (millimeters) message '/agents id0 x0 y0 z0 id1 x1 y1 z1.....'
+// 3: For indicate firs 'track' number (index + 1), then color message to spat '/source/1/color r g b a'
+// 4: For an external command to instantiate N agents, and every agent with 
+    // their respective state (s) and color (hex) '/agent/instance N s0 hex0 s1 hex1...' (sent to visualizer)
 
 //Initialize variables and constants
 var maxAgents             = 128;
@@ -185,6 +192,21 @@ function instanceExternalAgents(size){
     outlet(4, msg);
 }
 
+function externalSelect(agentID){
+    if(agentID >=0 && agentID < agentCollectionSize){
+        switch(agents[agentID].state){
+            case agent_locked_state://It means current is locked, then release
+                releasecurrent();                
+                break;
+            case agent_released_state://If in relased, it means it was caught, so lock it
+                lock(agentID);
+            break;
+        }
+    }else{
+        post("Agent ID " + agentID + " is not part of the collection.");
+    }
+}
+
 //https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
 componentToHex.local = 1;
 function componentToHex(c) {
@@ -202,18 +224,16 @@ function rgbToHex(r, g, b, includeSharp) {
 
 function UpdateAgents(){
     var dt = deltaTime * 0.001;
-    //For position sensor
-    if(currentAgentID >= 0){
-        outlet(5, ["/sensor/position", 
-                                        currentAgentID, 
-                                        Math.round(currentPositionSensor.x * 1000), 
-                                        Math.round(currentPositionSensor.y * 1000), 
-                                        Math.round(currentPositionSensor.z * 1000)
-                                    ]);
-    }
 
-    //For all agents
-    var allPositions = ["/agents", agentCollectionSize];
+    //For all agents (released size, agentId-emptyorlocked-, state, x, y, z, ...rest released agents (except state))    
+    var allAgentsInfo = ["/agents", 
+                        currentAgentID, 
+                        agents[currentAgentID].state,
+                        Math.round(currentPositionSensor.x * 1000),
+                        Math.round(currentPositionSensor.y * 1000),
+                        Math.round(currentPositionSensor.z * 1000),
+                        -1//here will be the released agents size
+                    ];
     var releasedAgents = 0;
     for(var i = 0; i < agentCollectionSize; i++){
         switch(agents[i].state){
@@ -221,14 +241,12 @@ function UpdateAgents(){
                 var position = agents[i].position = MoveAgent(i, dt, agents[i].position);
                 var positionMM = [i, Math.round(position.x * 1000), Math.round(position.y * 1000), Math.round(position.z * 1000)];
                 outlet(1, ["agent", i, positionMM[1], positionMM[2], positionMM[3]]);
-                allPositions = allPositions.concat(positionMM);
+                allAgentsInfo = allAgentsInfo.concat(positionMM);
                 releasedAgents++;
             break;
         }        
     }       
-    if(releasedAgents > 0){
-        allPositions[1] = releasedAgents;
-        outlet(2, allPositions);
-    }
+    allAgentsInfo[6] = releasedAgents;
+    outlet(2, allAgentsInfo);
 }
 UpdateAgents.local = 1;
