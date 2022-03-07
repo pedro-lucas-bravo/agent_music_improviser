@@ -40,6 +40,46 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-81",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 563.0, 1001.0, 32.0, 22.0 ],
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-80",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 526.0, 904.0, 173.0, 22.0 ],
+					"text" : "CartesianToSpherical 20 20 20"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 508.0, 965.0, 163.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "cartesian-spherical-polar.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js cartesian-spherical-polar.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-79",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -66,10 +106,10 @@
 					"id" : "obj-74",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 478.500000000000057, 419.0, 32.0, 22.0 ],
-					"text" : "t b b"
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "bang", "bang" ],
+					"patching_rect" : [ 478.500000000000057, 419.0, 42.0, 22.0 ],
+					"text" : "t b b b"
 				}
 
 			}
@@ -178,7 +218,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 309.0, 574.0, 164.0, 36.0 ],
-					"text" : "/agent/instance 4 1 00ff00 0 ff0000 0 ffff00 0 0000ff"
+					"text" : "/agent/instance 4 2 ffff00 2 00ffff 0 bfff00 0 00bfff"
 				}
 
 			}
@@ -248,7 +288,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 58.0, 703.0, 188.0, 22.0 ],
-					"text" : "/source/1/color 0. 1 0 1"
+					"text" : "/source/1/color 0.75 0 1 1"
 				}
 
 			}
@@ -3665,7 +3705,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.5, 86.0, 50.0, 22.0 ],
-									"text" : "3"
+									"text" : "2"
 								}
 
 							}
@@ -4026,7 +4066,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 600.0, 650.0, 100.0, 20.0 ],
-					"text" : "0 0 0"
+					"text" : "-475 792 329"
 				}
 
 			}
@@ -4145,7 +4185,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 750.0, 650.0, 100.0, 20.0 ],
-					"text" : "0 0 0"
+					"text" : "-475 792 329"
 				}
 
 			}
@@ -4264,7 +4304,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 900.0, 650.0, 100.0, 20.0 ],
-					"text" : "0 0 0"
+					"text" : "-475 792 329"
 				}
 
 			}
@@ -4383,7 +4423,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1050.0, 650.0, 100.0, 20.0 ],
-					"text" : "0 0 0"
+					"text" : "-475 792 329"
 				}
 
 			}
@@ -5411,6 +5451,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-81", 0 ],
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-47", 0 ],
 					"source" : [ "obj-41", 0 ]
 				}
@@ -5781,6 +5828,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-130", 0 ],
+					"source" : [ "obj-74", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-146", 0 ],
 					"source" : [ "obj-74", 1 ]
 				}
@@ -5811,6 +5865,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-74", 0 ],
 					"source" : [ "obj-78", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-80", 0 ]
 				}
 
 			}
@@ -6020,6 +6081,13 @@
 				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cartesian-spherical-polar.js",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
