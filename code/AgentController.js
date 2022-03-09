@@ -234,6 +234,11 @@ function note(){
         outlet(2,["/note", arguments[0], arguments[1], arguments[2]]);// /note agentId notePitch noteVelocity    
 }
 
+function volume(){
+    if(arguments[2] != 0)
+        outlet(2,["/volume", arguments[0], arguments[1]]);// /note agentId notePitch noteVelocity    
+}
+
 ///////// AGENTS BEHAVIOUR
 
 function UpdateAgents(){
