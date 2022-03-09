@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1202.0, 713.0 ],
+		"rect" : [ 41.0, 78.0, 936.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -218,7 +218,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 309.0, 574.0, 164.0, 36.0 ],
-					"text" : "/agent/instance 4 2 ffff00 2 00ffff 0 bfff00 0 00bfff"
+					"text" : "/agent/instance 4 0 003fff 0 ffff00 0 bfff00 0 3f00ff"
 				}
 
 			}
@@ -288,7 +288,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 58.0, 703.0, 188.0, 22.0 ],
-					"text" : "/source/1/color 0.75 0 1 1"
+					"text" : "/source/1/color 1 0 0. 1"
 				}
 
 			}
@@ -3982,7 +3982,8 @@
 					"id" : "obj-55",
 					"maxclass" : "newobj",
 					"numinlets" : 8,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 600.0, 730.0, 139.0, 22.0 ],
 					"text" : "SoundGenerator.maxpat"
 				}
@@ -4066,7 +4067,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 600.0, 650.0, 100.0, 20.0 ],
-					"text" : "-475 792 329"
+					"text" : "-310 -963 0"
 				}
 
 			}
@@ -4101,7 +4102,8 @@
 					"id" : "obj-88",
 					"maxclass" : "newobj",
 					"numinlets" : 8,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 750.0, 730.0, 139.0, 22.0 ],
 					"text" : "SoundGenerator.maxpat"
 				}
@@ -4185,7 +4187,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 750.0, 650.0, 100.0, 20.0 ],
-					"text" : "-475 792 329"
+					"text" : "-310 -963 0"
 				}
 
 			}
@@ -4220,7 +4222,8 @@
 					"id" : "obj-108",
 					"maxclass" : "newobj",
 					"numinlets" : 8,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 900.0, 730.0, 139.0, 22.0 ],
 					"text" : "SoundGenerator.maxpat"
 				}
@@ -4304,7 +4307,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 900.0, 650.0, 100.0, 20.0 ],
-					"text" : "-475 792 329"
+					"text" : "-310 -963 0"
 				}
 
 			}
@@ -4339,7 +4342,8 @@
 					"id" : "obj-129",
 					"maxclass" : "newobj",
 					"numinlets" : 8,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 1050.0, 730.0, 139.0, 22.0 ],
 					"text" : "SoundGenerator.maxpat"
 				}
@@ -4423,7 +4427,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1050.0, 650.0, 100.0, 20.0 ],
-					"text" : "-475 792 329"
+					"text" : "-310 -963 0"
 				}
 
 			}
@@ -5701,6 +5705,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
 					"source" : [ "obj-57", 0 ]
 				}
 
@@ -5905,6 +5916,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-88", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-88", 3 ],
 					"source" : [ "obj-89", 0 ]
 				}
@@ -5968,30 +5986,30 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-108::obj-65" : [ "live.gain~[4]", "live.gain~", 0 ],
-			"obj-108::obj-68" : [ "vst~[4]", "vst~", 0 ],
-			"obj-129::obj-65" : [ "live.gain~[5]", "live.gain~", 0 ],
-			"obj-129::obj-68" : [ "vst~[5]", "vst~", 0 ],
+			"obj-108::obj-65" : [ "live.gain~[9]", "live.gain~", 0 ],
+			"obj-108::obj-68" : [ "vst~[6]", "vst~", 0 ],
+			"obj-129::obj-65" : [ "live.gain~[2]", "live.gain~", 0 ],
+			"obj-129::obj-68" : [ "vst~[1]", "vst~", 0 ],
 			"obj-55::obj-65" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-55::obj-68" : [ "vst~[8]", "vst~", 0 ],
 			"obj-67" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
-			"obj-88::obj-65" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-88::obj-68" : [ "vst~[3]", "vst~", 0 ],
+			"obj-88::obj-65" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-88::obj-68" : [ "vst~[9]", "vst~", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
 				"obj-108::obj-65" : 				{
-					"parameter_longname" : "live.gain~[4]"
+					"parameter_longname" : "live.gain~[9]"
 				}
 ,
 				"obj-129::obj-65" : 				{
-					"parameter_longname" : "live.gain~[5]"
+					"parameter_longname" : "live.gain~[2]"
 				}
 ,
 				"obj-88::obj-65" : 				{
-					"parameter_longname" : "live.gain~[3]"
+					"parameter_longname" : "live.gain~[6]"
 				}
 
 			}

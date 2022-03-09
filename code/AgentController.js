@@ -6,7 +6,7 @@ outlets = 5;
 ////outet description
 // 0: For 'select' message 
 // 1: For individual agent position (millimeters) message 'agent id x y z' (e.g. agent 0 100 150 230)
-// 2: (Rewrite to all agents) For all released agents position (millimeters) message '/agents id0 x0 y0 z0 id1 x1 y1 z1.....'
+// 2: For sending message about agents like 'note' and for all released agents position (millimeters) message '/agents id0 x0 y0 z0 id1 x1 y1 z1.....'
 // 3: For indicate firs 'track' number (index + 1), then color message to spat '/source/1/color r g b a'
 // 4: For an external command to instantiate N agents, and every agent with 
     // their respective state (s) and color (hex) '/agent/instance N s0 hex0 s1 hex1...' (sent to visualizer)
@@ -146,7 +146,7 @@ function restart(){
     startbehavior();
 }
 
-function list(val){
+function list(val){    
     if(arguments.length == 3){//If list is 3 elements, it is a position vector
         //IMPORTANT: It is assumed that value are received in milimeters, so it converts to meters
         currentPositionSensor.x = arguments[0] * 0.001;
@@ -227,6 +227,11 @@ rgbToHex.local = 1;
 function rgbToHex(r, g, b, includeSharp) {
     var result = componentToHex(r) + componentToHex(g) + componentToHex(b);    
     return includeSharp ? "#" + result : result;
+}
+
+function note(){
+    if(arguments[2] != 0)
+        outlet(2,["/note", arguments[0], arguments[1], arguments[2]]);// /note agentId notePitch noteVelocity    
 }
 
 ///////// AGENTS BEHAVIOUR
