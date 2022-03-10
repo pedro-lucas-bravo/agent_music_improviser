@@ -3,6 +3,7 @@ outlets = 2;
 
 var keepActiveFlag = false;
 var argsTaskButton = new Array(1);
+var activationTime = 50;
 var taskbutton;
 
 function keepactive(val){
@@ -22,7 +23,7 @@ function list(controlNumber){
         if(!keepActiveFlag){
             argsTaskButton[0] = indexSelected;
             taskbutton = new Task(DeactivateButton, this, argsTaskButton);
-            taskbutton.schedule(50);
+            taskbutton.schedule(activationTime);
         }
     }
 }
@@ -30,4 +31,8 @@ function list(controlNumber){
 function DeactivateButton(index){    
     outlet(1, jsarguments[index] - 11, 0);
     arguments.callee.task.freepeer();
+}
+
+function activationperiod(val){
+    activationTime = val;
 }
