@@ -81,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 806.0, 460.0, 58.0, 22.0 ],
+					"patching_rect" : [ 1003.0, 98.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -93,8 +93,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 806.0, 493.0, 29.5, 22.0 ],
-					"text" : "0.5"
+					"patching_rect" : [ 1003.0, 137.0, 67.0, 22.0 ],
+					"text" : "volume 0.5"
 				}
 
 			}
@@ -813,7 +813,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
+					"destination" : [ "obj-34", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 

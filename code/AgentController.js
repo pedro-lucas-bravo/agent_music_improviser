@@ -34,7 +34,8 @@ for(var i = 0; i < maxAgents; i++){
         position  : new Vector(0.0, 1.0, 0.0),
         laststate : agent_empty_state,
         state     : agent_empty_state,
-        color     : new Vector(0.490196, 1.0, 0.0)// Default color from spat (kind of green)
+        color     : new Vector(0.490196, 1.0, 0.0),// Default color from spat (kind of green)
+        volume    : 0.5  
     };
 }
 
@@ -194,7 +195,8 @@ function instanceExternalAgents(size){
                     parseInt(agents[i].color.y * 255), 
                     parseInt(agents[i].color.z * 255), 
                     false
-                    )
+                    ),
+                agents[i].volume
             ]
                 );
     }
@@ -235,8 +237,8 @@ function note(){
 }
 
 function volume(){
-    if(arguments[2] != 0)
-        outlet(2,["/volume", arguments[0], arguments[1]]);// /note agentId notePitch noteVelocity    
+    agents[arguments[0]].volume = arguments[1];
+    outlet(2,["/volume", arguments[0], arguments[1]]);// /note agentId volume (0 - 1)   
 }
 
 ///////// AGENTS BEHAVIOUR
