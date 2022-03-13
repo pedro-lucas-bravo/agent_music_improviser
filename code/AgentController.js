@@ -2,7 +2,7 @@ include("Vector");
 include("AgentAutonomousMovement");
 
 inlets = 1;
-outlets = 5;
+outlets = 6;
 ////outet description
 // 0: For 'select' message 
 // 1: For individual agent position (millimeters) message 'agent id x y z' (e.g. agent 0 100 150 230)
@@ -10,9 +10,10 @@ outlets = 5;
 // 3: For indicate firs 'track' number (index + 1), then color message to spat '/source/1/color r g b a'
 // 4: For an external command to instantiate N agents, and every agent with 
     // their respective state (s) and color (hex) '/agent/instance N s0 hex0 s1 hex1...' (sent to visualizer)
+// 5: For local note from generators to max patch, which includes both note on and note off.
 
 //Initialize variables and constants
-var maxAgents             = 128;
+var maxAgents             = 99;
 var agents                = new Array(maxAgents);
 var agent_empty_state     = 0;
 var agent_locked_state    = 1;
@@ -95,6 +96,7 @@ function release(agentId){
 }
 
 function releasecurrent(){
+    var previousId = currentAgentID;
     var okrelease = release(currentAgentID);
     if(!okrelease) return;
 
@@ -116,6 +118,7 @@ function releasecurrent(){
         //Select and set a currentId as the collection size, it allows to avoid interaction ovr agents size
         select(agentCollectionSize);
     }
+    outlet(0, ["release", previousId]);
 }
 
 function lockcurrent(){//Lock is performed when recording finishes
@@ -129,6 +132,7 @@ function lock(agentId){//Lock is performed when agent is caught
             release(currentAgentID);
         select(agentId);
         lockcurrent();
+        outlet(0, ["lock", currentAgentID]);
     }
 }
 
@@ -233,7 +237,9 @@ function rgbToHex(r, g, b, includeSharp) {
 
 function note(){
     if(arguments[2] != 0)
-        outlet(2,["/note", arguments[0], arguments[1], arguments[2]]);// /note agentId notePitch noteVelocity    
+        outlet(2,["/note", arguments[0], arguments[1], arguments[2]]);// /note agentId notePitch noteVelocity
+    if(arguments[0] == currentAgentID)//notes from the one that is caught
+        outlet(5,[arguments[0], arguments[1], arguments[2]]);
 }
 
 function volume(){
