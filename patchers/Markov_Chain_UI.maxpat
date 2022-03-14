@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1202.0, 713.0 ],
+		"rect" : [ 41.0, 78.0, 1202.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -1820,13 +1820,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-100", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"midpoints" : [ 884.5, 177.0, 225.0, 177.0, 225.0, 348.0, 160.0, 348.0 ],
 					"order" : 4,
@@ -2894,14 +2887,6 @@
 
 			}
  ],
-		"parameters" : 		{
-			"parameterbanks" : 			{
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "MIDI_Length.maxpat",
 				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",

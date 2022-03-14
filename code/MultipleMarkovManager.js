@@ -11,6 +11,7 @@ outlets = 5;
 
 var maxSize                 = 99;
 var markovInstances         = new Array(maxSize);
+var msgOutputs              = new Array(maxSize);
 var markovSize              = 0;
 
 var gateNewStates;
@@ -46,13 +47,16 @@ function instantiate(n){
 
     for(var i = 0; i < n; i++){    
         markovInstances[i] = this.patcher.newdefault(baseLeftMargin+(i*elementBoxLength), baseTopMargin, "bpatcher Markov_Chain_UI.maxpat");        
+        msgOutputs[i] = this.patcher.newobject("message", baseLeftMargin+(i*elementBoxLength), baseTopMargin + 140, 50, 10);
+        msgOutputs[i].set([i, "$1", "$2"]);        
         
         this.patcher.connect(gateNewStates, i, markovInstances[i], 0);
         this.patcher.connect(gateMidiIn, i, markovInstances[i], 1);
         this.patcher.connect(gateBuild, i, markovInstances[i], 2);
         this.patcher.connect(gateReset, i, markovInstances[i], 3);
 
-        this.patcher.connect(markovInstances[i], 0, midi_out, 0);
+        this.patcher.connect(markovInstances[i], 0, msgOutputs[i], 0);
+        this.patcher.connect(msgOutputs[i], 0, midi_out, 0);
     }    
     markovSize = n;
 }
@@ -64,6 +68,7 @@ function removeall(){
     this.patcher.remove(gateReset);
     for(var i = 0; i < maxSize; i++){
        this.patcher.remove(markovInstances[i]);
+       this.patcher.remove(msgOutputs[i]);
     } 
 }
 
@@ -89,10 +94,22 @@ function stopperformance(){
     outlet(1, 0);
 }
 
+function startperformanceat(id){
+    outlet(0, id + 1);// activate this id for a moment
+    outlet(1, 1); //send signal
+    startlisten(currentId);//Return to the current id
+}
+
+function stopperformanceat(id){
+    outlet(0, id + 1);// activate this id for a moment
+    outlet(1, 0); //send signal
+    startlisten(currentId);//Return to the current id
+}
+
 //MIDI in
 function list(val){    
     if(arguments.length == 2){//If list is 2 elements, it is a midi note input pair
-        outlet(2, arguments);
+        outlet(2, [arguments[0], arguments[1]]);
     }    
 }
 
@@ -101,6 +118,22 @@ function train(){
 }
 
 function reset(){
+    stopperformance();
+    outlet(4, "bang");    
+}
+
+function resetat(id){
+    stopperformanceat(id);
+    outlet(0, id + 1);// activate this id for a moment
     outlet(4, "bang");
+    startlisten(currentId);//Return to the current id   
+}
+
+function resetall(){
+    for(var i = 0; i < markovSize; i++){
+        resetat(i);
+    }
+    outlet(0, 0);//close all
+    currentId =  -1;
 }
 
