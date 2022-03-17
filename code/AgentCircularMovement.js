@@ -1,3 +1,6 @@
+inlets = 1;
+outlets = 1;
+
 include("Vector")
 include("cartesian-spherical-polar");
 
@@ -11,9 +14,9 @@ for(var i = 0; i < agentsMovement.length; i++){
     };
 }
 
-function MoveAgent(agentId, deltaTime, currentPosition){
+function MoveAgent(agentId, deltaTime, currentX, currentY, currentZ){
     var agent = agentsMovement[agentId];
-    var polarArray = CartesianToSpherical(currentPosition);
+    var polarArray = CartesianToSpherical(currentX, currentY, currentZ);
     agent.polar = new Vector(polarArray[0], polarArray[1], polarArray[2]);
     
     agent.polar.x += deltaTime * speed * Math.PI / 180.0;
@@ -28,5 +31,5 @@ function MoveAgent(agentId, deltaTime, currentPosition){
     agent.position.y = cart[1];
     agent.position.z = cart[2];
 
-    return agent.position; 
+    outlet(0, ["agentpos", agentId, agent.position.x, agent.position.y, agent.position.z]) 
 }

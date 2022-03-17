@@ -120,7 +120,7 @@ function addlooper(){
         } 
         agentDataSelector = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin + 160, "select", argsAgentSelector);
         var fullagentpos_unpack = this.patcher.getnamed("fullagentpos_unpack");
-        this.patcher.connect(fullagentpos_unpack, 1, agentDataSelector, 0);
+        this.patcher.connect(fullagentpos_unpack, 0, agentDataSelector, 0);
         for(var i = 0; i < currentLooperIndex + 1; i++){            
             this.patcher.connect(agentDataSelector, i, msgsAgentPosition[i], 0);            
         } 

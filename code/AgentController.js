@@ -1,10 +1,9 @@
 include("Vector");
-include("AgentAutonomousMovement");
 
 inlets = 1;
 outlets = 6;
 ////outet description
-// 0: For 'select' message 
+// 0: For 'select' message and state message
 // 1: For individual agent position (millimeters) message 'agent id x y z' (e.g. agent 0 100 150 230)
 // 2: For sending message about agents like 'note' and for all released agents position (millimeters) message '/agents id0 x0 y0 z0 id1 x1 y1 z1.....'
 // 3: For indicate firs 'track' number (index + 1), then color message to spat '/source/1/color r g b a'
@@ -265,7 +264,10 @@ function UpdateAgents(){
     for(var i = 0; i < agentCollectionSize; i++){
         switch(agents[i].state){
             case agent_released_state:
-                var position = agents[i].position = MoveAgent(i, dt, agents[i].position);
+                //Request calculation
+                outlet(1, ["getpos", i, dt, agents[i].position.x, agents[i].position.y, agents[i].position.z]);                
+                //Receive from agentpos onto agentCalculatedPos
+                var position = agents[i].position = agentCalculatedPos;
                 var positionMM = SendPositionToAgent(i, position);
                 allAgentsInfo = allAgentsInfo.concat(positionMM);
                 releasedAgents++;
@@ -276,3 +278,30 @@ function UpdateAgents(){
     outlet(2, allAgentsInfo);
 }
 UpdateAgents.local = 1;
+
+//Just for receivent when request to movement module
+var agentCalculatedPos;
+function agentpos(id, x, y, z){
+    agentCalculatedPos = new Vector(x, y, z);
+}
+
+
+// /// Strategy for calling another object outside and get a value
+// var testVar = 0;
+// var testObj;
+
+// //Input message
+// function test(){
+//     if(testObj == null){
+//         testObj = this.patcher.getnamed("test_obj");
+//         post("INSTANCE");
+//     }
+//     outlet(0, ["test", arguments[0],  arguments[1], arguments[2]]);// request value (it receives in testresult and fill testVar)
+//     post("RESULT: " + testVar); //testVar can be queried
+//     testVar = 0;//Reset if needed
+// }
+
+// //Receive result from external object (it executes when send request to outlet)
+// function testresult(val){
+//     testVar = val;
+// }
