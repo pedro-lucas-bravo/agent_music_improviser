@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3730023132,
+	"modificationdate" : 3730390481,
 	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -16,6 +16,11 @@
 				"toplevel" : 1
 			}
 ,
+			"AutonomousMusicPerformer.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"ClockClick.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -27,6 +32,16 @@
 			}
 ,
 			"Looper.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"MIDI_Length.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"Markov_Chain_UI.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -61,17 +76,7 @@
 				"local" : 1
 			}
 ,
-			"Markov_Chain_UI.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"MIDI_Length.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"AutonomousMusicPerformer.maxpat" : 			{
+			"AutonomousAnnMovement.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -80,6 +85,11 @@
 ,
 		"code" : 		{
 			"AgentController.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"MultipleMarkovManager.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -100,11 +110,6 @@
 			}
 ,
 			"LooperDictHandler.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"MultipleMarkovManager.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
