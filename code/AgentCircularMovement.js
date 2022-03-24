@@ -14,12 +14,12 @@ for(var i = 0; i < agentsMovement.length; i++){
     };
 }
 
-function MoveAgent(agentId, deltaTime, currentX, currentY, currentZ){
+function MoveAgentProcess(agentId, deltaTime, currentX, currentY, currentZ, dir){
     var agent = agentsMovement[agentId];
     var polarArray = CartesianToSpherical(currentX, currentY, currentZ);
     agent.polar = new Vector(polarArray[0], polarArray[1], polarArray[2]);
     
-    agent.polar.x += deltaTime * speed * Math.PI / 180.0;
+    agent.polar.x += deltaTime * dir * speed * Math.PI / 180.0;
     if(agent.polar.x >= 2.0 * Math.PI)
         agent.polar.x = 0.0;
 
@@ -30,6 +30,10 @@ function MoveAgent(agentId, deltaTime, currentX, currentY, currentZ){
     agent.position.x = cart[0];
     agent.position.y = cart[1];
     agent.position.z = cart[2];
+    return agent;
+}
 
+function MoveAgent(agentId, deltaTime, currentX, currentY, currentZ){    
+    var agent = MoveAgentProcess(agentId, deltaTime, currentX, currentY, currentZ, 1);
     outlet(0, ["agentpos", agentId, agent.position.x, agent.position.y, agent.position.z]) 
 }

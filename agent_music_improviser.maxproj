@@ -2,8 +2,8 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3730390481,
-	"viewrect" : [ 573.0, 166.0, 300.0, 500.0 ],
+	"modificationdate" : 3730891729,
+	"viewrect" : [ 871.0, 203.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -110,6 +110,11 @@
 			}
 ,
 			"LooperDictHandler.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"AgentSwarmBehaviour.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
