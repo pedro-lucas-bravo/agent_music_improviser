@@ -16,12 +16,19 @@ for(var i = 0; i < agentsMovement.length; i++){
     };
 }
 
+function lerp(a, b, t) {
+    return (1 - t) * a + t * b;
+}
+var lerpTimer = 0;
+var lerpSpeed = 0.1;
+var currentPx = new Vector(0, 0, 0);
+var currentGazeDir = new Vector(0, 0, 0);
 function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
     //Get the size
     if(agentId > size - 1)
         size = agentId + 1;    
-
-    var px = new Vector(0,0,0);
+    //lerpTimer += deltaTime;
+    var px = currentPx = Vector.lerp(currentPx, gazePos.multiply(size), deltaTime * lerpSpeed);
     //Calculate next position from others (Px)
     for(var i = 0; i < size; i++){
         if(i != agentId){
@@ -39,7 +46,8 @@ function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
     //px = px.divide((size - 1) * 1.0);
 
     //Request position from ANN
-    outlet(1, "getannpos");
+    var gazeData = CalculateGazeData(agentsMovement[agentId].position);
+    outlet(1, ["getannpos", gazeData[0], gazeData[1]]);
 
     //Cache current position
     if(agentsMovement[agentId].position.x == 0 && 
@@ -64,8 +72,14 @@ function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
     //Calculate Ptarget
     //var ptarget = positionFromAnn.add(px).add(agent.position).divide(3.0);
     //var ptarget = agent.position;    
-    var currentPos = new Vector(currentX, currentY, currentZ);
-    var ptarget = currentPos.add(px.add(agent.position)).divide(3.0);
+    //var currentPos = new Vector(currentX, currentY, currentZ);
+
+    currentGazeDir = Vector.lerp(currentGazeDir, 
+                                gazeDir.multiply(1.0 + Math.random()).multiply(agentsMovement[agentId].direction), 
+                                deltaTime * lerpSpeed);
+
+    var div = size <= 1 ? 2.0 : 3.0;
+    var ptarget = currentGazeDir.add(px.add(agent.position)).divide(div);
     //post(agent.position.x);
     //Do a kind of smooth damp (TO DO)
 
@@ -77,6 +91,20 @@ function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
 var positionFromAnn = new Vector(0, 0, 0);
 function agentannpos(x, y, z){
     positionFromAnn = new Vector(x, y, z);
+}
+
+var gazePos = new Vector(0, 0, 0);
+var gazeDir = new Vector(0, 0, 0);
+function gaze(xp, yp, zp, xd, yd, zd){
+    gazePos = new Vector(xp * 0.001, yp * 0.001, zp * 0.001);
+    gazeDir = new Vector(xd * 0.001, yd * 0.001, zd * 0.001);
+}
+
+function CalculateGazeData(agentPosition){
+    var displacementAgentGaze = agentPosition.subtract(gazePos);
+    var distance = Math.round(displacementAgentGaze.length() * 1000);
+    var angle = Math.round(displacementAgentGaze.angleTo(gazeDir) * 180 / Math.PI);
+    return [distance, angle];
 }
 
 function resetagent(agentId){

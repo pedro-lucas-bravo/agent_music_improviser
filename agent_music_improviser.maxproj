@@ -2,8 +2,8 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3730891729,
-	"viewrect" : [ 871.0, 203.0, 300.0, 500.0 ],
+	"modificationdate" : 3731066474,
+	"viewrect" : [ 871.0, 202.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -14,6 +14,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"AutonomousAnnMovement.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"AutonomousMusicPerformer.maxpat" : 			{
@@ -75,16 +80,16 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
-,
-			"AutonomousAnnMovement.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
 
 		}
 ,
 		"code" : 		{
 			"AgentController.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"AgentSwarmBehaviour.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -114,7 +119,7 @@
 				"local" : 1
 			}
 ,
-			"AgentSwarmBehaviour.js" : 			{
+			"NonRepeatInput.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

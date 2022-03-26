@@ -40,6 +40,53 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-108",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 505.000000000000057, 649.0, 165.0, 22.0 ],
+					"text" : "udpsend 192.168.1.107 6162"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-103",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 494.000000000000057, 584.0, 29.0, 22.0 ],
+					"text" : "thru"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-93",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 689.5, 1246.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-81",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 381.0, 314.0, 82.0, 22.0 ],
+					"text" : "route /gazedir"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-92",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -69,7 +116,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 381.0, 309.0, 69.0, 22.0 ],
+					"patching_rect" : [ 474.0, 314.0, 69.0, 22.0 ],
 					"text" : "route /gaze"
 				}
 
@@ -78,11 +125,11 @@
 				"box" : 				{
 					"id" : "obj-87",
 					"maxclass" : "newobj",
-					"numinlets" : 4,
+					"numinlets" : 5,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 323.0, 376.0, 196.0, 22.0 ],
-					"text" : "AutonomousAnnMovement.maxpat"
+					"patching_rect" : [ 323.0, 376.0, 175.0, 22.0 ],
+					"text" : "AutonomousMovement.maxpat"
 				}
 
 			}
@@ -359,7 +406,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 921.5, 1149.0, 50.0, 22.0 ],
-					"text" : "2"
+					"text" : "0"
 				}
 
 			}
@@ -383,7 +430,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 780.0, 1401.0, 50.0, 22.0 ],
-					"text" : "65 0"
+					"text" : "55 48"
 				}
 
 			}
@@ -395,7 +442,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 721.0, 1401.0, 50.0, 22.0 ],
-					"text" : "84 0"
+					"text" : "57 0"
 				}
 
 			}
@@ -407,7 +454,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 662.5, 1401.0, 50.0, 22.0 ],
-					"text" : "83 0"
+					"text" : "52 0"
 				}
 
 			}
@@ -455,7 +502,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 863.0, 1324.0, 50.0, 22.0 ],
-					"text" : "65 0"
+					"text" : "52 0"
 				}
 
 			}
@@ -809,7 +856,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 683.0, 1246.0, 73.0, 22.0 ],
+					"patching_rect" : [ 689.5, 1277.0, 73.0, 22.0 ],
 					"text" : "instantiate 4"
 				}
 
@@ -1026,7 +1073,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 327.0, 626.0, 166.0, 50.0 ],
-					"text" : "/agent/instance 4 2 00ff00 0.606299 2 0000ff 0.685039 0 ff7f00 0.5 0 00ff7f 0.5"
+					"text" : "/agent/instance 4 2 00ffff 0.5 2 bf00ff 0.5 2 7fff00 0.5 2 3f00ff 0.5"
 				}
 
 			}
@@ -1083,7 +1130,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 447.0, 574.0, 165.0, 22.0 ],
+					"patching_rect" : [ 494.000000000000057, 612.0, 165.0, 22.0 ],
 					"text" : "udpsend 192.168.1.106 6162"
 				}
 
@@ -1096,7 +1143,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 327.0, 682.5, 188.0, 22.0 ],
-					"text" : "/source/1/color 0.75 0 1 1"
+					"text" : "/source/1/color 1 0 0.75 1"
 				}
 
 			}
@@ -3443,7 +3490,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 364.0, 96.0, 50.0, 22.0 ],
-									"text" : "20 0"
+									"text" : "1 24"
 								}
 
 							}
@@ -4738,7 +4785,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 119.0, 161.0, 50.0, 22.0 ],
-									"text" : "2"
+									"text" : "3"
 								}
 
 							}
@@ -4987,7 +5034,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 60.5, 86.0, 50.0, 22.0 ],
-									"text" : "2"
+									"text" : "3"
 								}
 
 							}
@@ -5369,7 +5416,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 650.0, 700.0, 100.0, 20.0 ],
-					"text" : "-177 192 -270"
+					"text" : "-867 -110 528"
 				}
 
 			}
@@ -5477,7 +5524,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 800.0, 700.0, 100.0, 20.0 ],
-					"text" : "-177 192 -270"
+					"text" : "-867 -110 528"
 				}
 
 			}
@@ -5585,7 +5632,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 950.0, 700.0, 100.0, 20.0 ],
-					"text" : "-177 192 -270"
+					"text" : "-867 -110 528"
 				}
 
 			}
@@ -5693,7 +5740,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1100.0, 700.0, 100.0, 20.0 ],
-					"text" : "-177 192 -270"
+					"text" : "-867 -110 528"
 				}
 
 			}
@@ -5899,6 +5946,22 @@
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"source" : [ "obj-100", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-108", 0 ],
+					"order" : 0,
+					"source" : [ "obj-103", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-143", 0 ],
+					"order" : 1,
+					"source" : [ "obj-103", 0 ]
 				}
 
 			}
@@ -6147,7 +6210,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-143", 0 ],
+					"destination" : [ "obj-103", 0 ],
 					"source" : [ "obj-146", 0 ]
 				}
 
@@ -6155,7 +6218,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-148", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-147", 0 ]
 				}
 
@@ -6163,7 +6226,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
-					"order" : 2,
+					"order" : 3,
+					"source" : [ "obj-147", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-81", 0 ],
+					"order" : 1,
 					"source" : [ "obj-147", 0 ]
 				}
 
@@ -6436,24 +6507,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-137", 1 ],
-					"order" : 1,
-					"source" : [ "obj-23", 3 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-143", 0 ],
-					"order" : 1,
+					"destination" : [ "obj-103", 0 ],
+					"order" : 0,
 					"source" : [ "obj-23", 4 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-143", 0 ],
+					"destination" : [ "obj-103", 0 ],
 					"source" : [ "obj-23", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-137", 1 ],
+					"order" : 1,
+					"source" : [ "obj-23", 3 ]
 				}
 
 			}
@@ -6476,7 +6547,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-56", 1 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-23", 4 ]
 				}
 
@@ -7708,6 +7779,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-87", 2 ],
+					"source" : [ "obj-81", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-65", 0 ],
 					"order" : 1,
 					"source" : [ "obj-82", 0 ]
@@ -7810,7 +7888,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-87", 2 ],
+					"destination" : [ "obj-87", 3 ],
 					"source" : [ "obj-91", 0 ]
 				}
 
@@ -7819,6 +7897,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-87", 1 ],
 					"source" : [ "obj-92", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-76", 0 ],
+					"source" : [ "obj-93", 0 ]
 				}
 
 			}
@@ -7994,7 +8079,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "AutonomousAnnMovement.maxpat",
+				"name" : "AutonomousMovement.maxpat",
 				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -8079,6 +8164,13 @@
 			}
 , 			{
 				"name" : "MultipleMarkovManager.js",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "NonRepeatInput.js",
 				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
