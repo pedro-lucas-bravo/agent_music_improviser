@@ -57,7 +57,7 @@ function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
         //Save position in variable
         agentsMovement[agentId].position.x = currentX;
         agentsMovement[agentId].position.y = currentY;
-        agentsMovement[agentId].position.z = currentZ;
+        agentsMovement[agentId].position.z = currentZ + Math.random()* (0.5 * 2);
         agentsMovement[agentId].direction = Math.random() > 0.5 ? 1 : -1;
         post("set");
     }

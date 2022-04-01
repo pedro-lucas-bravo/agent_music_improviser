@@ -13,6 +13,8 @@ var routeSpatMsgs;
 var gateSpatMsgs;
 var agentDataSelector;
 var gateSyntheParams;
+var gatemusicObj;
+var gatestopObj;
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
@@ -24,6 +26,8 @@ var msgsLoad                = new Array(maxLoopers);
 //var agentDataSelector       = new Array(maxLoopers);
 var msgsAgentPosition       = new Array(maxLoopers);
 var msgsOpenSpat            = new Array(maxLoopers);
+var receivesLooper          = new Array(maxLoopers);
+var sendsLooper             = new Array(maxLoopers);
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 650;
 var baseTopMargin           = 500;
@@ -34,6 +38,7 @@ function addlooper(){
         currentLooperIndex++;
         //Instance Looper
         loopers[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin, "Looper.maxpat");
+        receivesLooper[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin - 25, "r looper" + currentLooperIndex);
         soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 280, "SoundGenerator.maxpat");        
         msgsTrackN[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, 30, 10);
         msgsTrackN[currentLooperIndex].set(currentLooperIndex);
@@ -51,6 +56,7 @@ function addlooper(){
         msgsOpenSpat[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 240, 80, 10);
         msgsOpenSpat[currentLooperIndex].set("/window/open");
         
+        this.patcher.connect(receivesLooper[currentLooperIndex], 0, loopers[currentLooperIndex], 0);
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
         this.patcher.connect(loopers[currentLooperIndex], 1, soundGens[currentLooperIndex], 1);
         this.patcher.connect(msgsOpen[currentLooperIndex], 0, soundGens[currentLooperIndex], 2);   
@@ -79,6 +85,8 @@ function addlooper(){
             this.patcher.remove(gateSpatMsgs); 
             this.patcher.remove(agentDataSelector);
             this.patcher.remove(gateSyntheParams);
+            this.patcher.remove(gatemusicObj);
+            this.patcher.remove(gatestopObj);
         }
 
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 2);
@@ -114,7 +122,7 @@ function addlooper(){
             argsPluginselector[i] = i + 1;  
             argsAgentSelector[i] = i; 
         }
-        pluginSelector = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 40, "select", argsPluginselector);
+        pluginSelector = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 50, "select", argsPluginselector);
         for(var i = 0; i < currentLooperIndex + 1; i++){
             this.patcher.connect(pluginSelector, i, msgsOpen[i], 0);   
         } 
@@ -167,7 +175,27 @@ function addlooper(){
         var agentpos_unpack = this.patcher.getnamed("agentpos_unpack");        
         this.patcher.connect(agentpos_unpack, 0, msgsAgentPosition[currentLooperIndex], 1);
 
-        /// Connect 
+        /// Connect          
+
+        //Bang for choosing the current track
+        currentTrack.message("bang");
+        
+        //Bang for choosing binaural render
+        msgSpBinaural.message("bang");
+
+        //From autonomous behaviour
+        var gatemusic_0 = this.patcher.getnamed("gatemusic_0");
+        var gatemusic_1 = this.patcher.getnamed("gatemusic_1");
+        var gatestop_0 = this.patcher.getnamed("gatestop_0");
+        var gatestop_1 = this.patcher.getnamed("gatestop_1");
+        gatemusicObj = this.patcher.newdefault(gatemusic_0.rect[0], gatemusic_0.rect[1] + 40, "gate " + (currentLooperIndex + 1));
+        gatestopObj = this.patcher.newdefault(gatestop_0.rect[0], gatestop_0.rect[1] + 40, "gate " + (currentLooperIndex + 1));
+        this.patcher.connect(gatemusic_0, 0, gatemusicObj, 0);
+        this.patcher.connect(gatemusic_1, 0, gatemusicObj, 1);
+        this.patcher.connect(gatestop_0, 0, gatestopObj, 0);
+        this.patcher.connect(gatestop_1, 0, gatestopObj, 1);
+
+        sendsLooper[currentLooperIndex] = this.patcher.newdefault(gatemusic_0.rect[0] + (currentLooperIndex*looperBoxLength), gatemusic_0.rect[1] + 80, "s looper" + currentLooperIndex);
 
         /// Connect individual elements  
         for(var i = 0; i < currentLooperIndex + 1; i++){
@@ -180,13 +208,11 @@ function addlooper(){
             this.patcher.connect(msgStopAll, 0, loopers[i], 0);
             this.patcher.connect(gateSpatMsgs, i, soundGens[i],6);
             this.patcher.connect(gateSyntheParams, i, soundGens[i],8);
-        }  
-
-        //Bang for choosing the current track
-        currentTrack.message("bang");
+            this.patcher.connect(gatemusicObj, i, sendsLooper[i], 0);
+            this.patcher.connect(gatestopObj, i, sendsLooper[i], 0);
+        } 
         
-        //Bang for choosing binaural render
-        msgSpBinaural.message("bang");
+
     }else{
         post("Cannot create more than " +maxLoopers+ " loopers.")
     }
@@ -202,6 +228,8 @@ function createloopers(n){
 
 function removeallloopers(){
     for(var i=0;i<currentLooperIndex + 1;i++){
+        this.patcher.remove(receivesLooper[i]);
+        this.patcher.remove(sendsLooper[i]);
         this.patcher.remove(loopers[i]);
         this.patcher.remove(soundGens[i]);        
         this.patcher.remove(msgsTrackN[i]);
@@ -224,6 +252,8 @@ function removeallloopers(){
     this.patcher.remove(gateSpatMsgs);
     this.patcher.remove(agentDataSelector);
     this.patcher.remove(gateSyntheParams);
+    this.patcher.remove(gatemusicObj);
+    this.patcher.remove(gatestopObj);
     currentLooperIndex = -1;
     gc();
 }
