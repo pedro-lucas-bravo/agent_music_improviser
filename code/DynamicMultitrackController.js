@@ -15,6 +15,7 @@ var agentDataSelector;
 var gateSyntheParams;
 var gatemusicObj;
 var gatestopObj;
+var flushBangObj;
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
@@ -29,7 +30,7 @@ var msgsOpenSpat            = new Array(maxLoopers);
 var receivesLooper          = new Array(maxLoopers);
 var sendsLooper             = new Array(maxLoopers);
 var currentLooperIndex      = -1;
-var baseLeftMargin          = 650;
+var baseLeftMargin          = 670;
 var baseTopMargin           = 500;
 var looperBoxLength         = 150;
 
@@ -39,7 +40,7 @@ function addlooper(){
         //Instance Looper
         loopers[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin, "Looper.maxpat");
         receivesLooper[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin - 25, "r looper" + currentLooperIndex);
-        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 280, "SoundGenerator.maxpat");        
+        soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 320, "SoundGenerator.maxpat");        
         msgsTrackN[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, 30, 10);
         msgsTrackN[currentLooperIndex].set(currentLooperIndex);
         //msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
@@ -87,6 +88,7 @@ function addlooper(){
             this.patcher.remove(gateSyntheParams);
             this.patcher.remove(gatemusicObj);
             this.patcher.remove(gatestopObj);
+            this.patcher.remove(flushBangObj);
         }
 
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 2);
@@ -195,6 +197,10 @@ function addlooper(){
         this.patcher.connect(gatestop_0, 0, gatestopObj, 0);
         this.patcher.connect(gatestop_1, 0, gatestopObj, 1);
 
+        flushBangObj = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin + 280, "button");
+        var globalPause = this.patcher.getnamed("global_pause");
+        this.patcher.connect(globalPause, 0, flushBangObj, 0);
+
         sendsLooper[currentLooperIndex] = this.patcher.newdefault(gatemusic_0.rect[0] + (currentLooperIndex*looperBoxLength), gatemusic_0.rect[1] + 80, "s looper" + currentLooperIndex);
 
         /// Connect individual elements  
@@ -210,6 +216,7 @@ function addlooper(){
             this.patcher.connect(gateSyntheParams, i, soundGens[i],8);
             this.patcher.connect(gatemusicObj, i, sendsLooper[i], 0);
             this.patcher.connect(gatestopObj, i, sendsLooper[i], 0);
+            this.patcher.connect(flushBangObj, 0, soundGens[i],1);
         } 
         
 
@@ -254,6 +261,7 @@ function removeallloopers(){
     this.patcher.remove(gateSyntheParams);
     this.patcher.remove(gatemusicObj);
     this.patcher.remove(gatestopObj);
+    this.patcher.remove(flushBangObj);
     currentLooperIndex = -1;
     gc();
 }
