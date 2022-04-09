@@ -40,12 +40,252 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-72",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1237.0, 330.0, 29.0, 22.0 ],
+					"text" : "thru"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-71",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 895.0, 557.0, 29.0, 22.0 ],
+					"text" : "thru"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-68",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1324.0, 494.0, 39.0, 22.0 ],
+					"text" : "35 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-69",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1280.0, 494.0, 39.0, 22.0 ],
+					"text" : "30 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-70",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1280.0, 394.0, 79.0, 22.0 ],
+					"text" : "route release"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-64",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1232.0, 494.0, 39.0, 22.0 ],
+					"text" : "32 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-66",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1188.0, 494.0, 39.0, 22.0 ],
+					"text" : "27 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-67",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1188.0, 394.0, 71.0, 22.0 ],
+					"text" : "route attack"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-62",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1134.0, 494.0, 42.0, 22.0 ],
+					"text" : "90 0.7"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-60",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1088.0, 494.0, 39.0, 22.0 ],
+					"text" : "89 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-57",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1044.0, 494.0, 39.0, 22.0 ],
+					"text" : "88 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-55",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1044.0, 394.0, 68.0, 22.0 ],
+					"text" : "route delay"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-54",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 976.5, 494.0, 39.0, 22.0 ],
+					"text" : "93 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 926.0, 449.0, 97.0, 22.0 ],
+					"text" : "scale 0. 1. 0. 0.5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-49",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 926.0, 494.0, 39.0, 22.0 ],
+					"text" : "91 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 926.0, 394.0, 73.0, 22.0 ],
+					"text" : "route reverb"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 834.0, 426.0, 39.0, 22.0 ],
+					"text" : "23 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 834.0, 394.0, 75.0, 22.0 ],
+					"text" : "route lpf_res"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-38",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 738.0, 426.0, 39.0, 22.0 ],
+					"text" : "22 $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 738.0, 394.0, 79.0, 22.0 ],
+					"text" : "route lpf_freq"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-24",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 773.5, 235.0, 234.0, 22.0 ],
+					"patching_rect" : [ 799.5, 181.0, 234.0, 22.0 ],
 					"text" : "PresetHandler.maxpat data/soundgen_pre"
 				}
 
@@ -57,7 +297,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 917.5, 189.0, 72.0, 22.0 ],
+					"patching_rect" : [ 943.5, 135.0, 72.0, 22.0 ],
 					"text" : "loadfrom $1"
 				}
 
@@ -69,7 +309,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 917.5, 155.0, 79.0, 22.0 ],
+					"patching_rect" : [ 943.5, 101.0, 79.0, 22.0 ],
 					"text" : "route presets"
 				}
 
@@ -81,7 +321,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 437.0, 204.0, 210.0, 22.0 ],
+					"patching_rect" : [ 424.0, 112.0, 210.0, 22.0 ],
 					"text" : "PresetHandler.maxpat data/soundgen"
 				}
 
@@ -98,7 +338,7 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 311.0, 481.0, 300.0, 100.0 ],
+					"patching_rect" : [ 315.0, 598.0, 300.0, 100.0 ],
 					"save" : [ "#N", "vst~", "loaduniqueid", 0, "D:/VST/VST64/Tunefish/Tunefish4.dll", ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -134,7 +374,7 @@
 							"isbase64" : 1,
 							"sliderorder" : [  ],
 							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3xL2LyMybCLvbyL2jSMyDCN1.yL0HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
+							"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nCUXjARL.................................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3BM4HCLv.CLwLSM3jCN0jCLvfyM4HBHGUlaBElajcWOh.iKwTSN4jSN4jiMzHyL2HSLyDyLzfiHfbTYtgTXx0la8HBLt.SLx.CLv.CLvDCLzLCL3DiL3LiMh.xQk4FQg0Fb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHv3BM4TSN4jSN4DCN4LyM1fyLw.SM0HBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKvHCMv.CLv.CLx.CN1DiMxTiM2DiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtM0XgwVY8HBLt.iL3.CLv.CLvfiMzHiM2LCM4HCMh.hSuk1bk8ja8HBLt.SLx.CLv.CLvDCLzLCL3DiL3LiMh.hSuk1bkYjbkEWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOh.iKvTiMv.CLv.SL2HCN0LCM1jCNzjiHfXDazwDTO4VOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtLCL3fCLv.SLwfyMyHCM0HyL4HiMh.hQrQGSPIUYy0iHv3xL1PCLv.CL0HiLwLiM1fCNxLiLzHBHFwFcHA0St0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iKvDiLv.CLv.CLw.CMy.CNwHCNyXiHfXDazgDTRU1b8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLtbyLwbCL2LyLzTSL3PyLxXSL2DSNh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtbiM3HSNy.iLyDCL4PyL1.yL0DiMh.RQtYWLRUFa8HBLtXSN0DiLwjCMyjSMvXSMy.yM1DyMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLtbCMyjCLxPCMzfyL4PyM2TyL4.iMh.RQtYmLDU1X8HBLtXSN0DiLx.CLyTSM0HSN2fSMwTiMh.RQtYmLSU2b8HBLtfSL2.yMxjCN2TSM1PSM2TSL4TyLh.RQtYmLRUFa8HBLtbyLwbCL2LyLzTSL3PyLxXSL2DSNh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3BMv.CLv.CLyTyM1HyM3XCN1TiLyHBHLY1awPTYv0iHv3RL4fSMyDSL4TSMxDyL0PiM2TiL4HBHLY1awLEZv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtPyL3LSN4fSMwLiLxDyMz.yMxHyMh.BSl8lLDUFb8HBLtfyM0jSN4fCL3LSLwPiMxPCLxLCMh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsESSuQVOh.iK3.CLv.CLvDSL4HCL4HCN4TSMvfiHfzTawPUXxcVYz0iHv3BLxTiMz.SN4jCN4fyLwPCM2XCLwHBHM0lLS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsISSuQVOh.iKzDiLv.CLv.CLzbiM3LyMwTCNx.iHfzTaxPUXxcVYz0iHv3xLvbiM4DSN4DyLxjSL4LSLwTiLyHBHM01LS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsMSSuQVOh.iK2PCLv.CLv.SN0LiM2PyLwXCMvXiHfzTayPUXxcVYz0iHv3RLvHSM1LSN4jSM4LiL0bSNvPCL0HBHM0FMS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsQSSuQVOh.iKzPCNv.CLvDyL3HCNxbyM0fyM3jiHfzTazPUXxcVYz0iHv3BL2XSNxLSLvHSLz.CMxXiMyTyMzHBHM0VMS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsUSSuQVOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3xLvbiM4DSN4DyLxjSL4LSLwTiLyHBHM0lMS8VcxMVY8HBLtHCN0bSLz.CLvPiMyPCN0bSL2byMh.RSsYSSuQVOh.iK0LiLv.CLv.SMxPSMx.CN2PCLxLiHfzTa1PUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM01MS8VcxMVY8HBLtDCMxfSM2.CLvHyLwbCMxfSM3fSNh.RSscSSuQVOh.iK4.yM4jSN4jiLybCL1.SMzXCN2TiHfzTa2PUXxcVYz0iHv3xL0fSN2PCLvjyM0HiL2LSM0jSM2HBHM0FNS8VcxMVY8HBLtDCMxfSM2.CLvHyLwbCMxfSM3fSNh.RSsgSSuQVOh.iKzTSL4jSN4jiLwLiLwfiM3fSN1TiHfzTa3PUXxcVYz0iHv3hL3HCL0.SN4bCLwfCNwPCL3XSNwHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKy.CLv.CLvDSL4HCL4HCN4TSMvfiHfTjYlU1XzISOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzMSOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hL3.CLv.CLvDSL4HCL4HCN4TSMwHBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3hLzPCLv.CLvHyMzDCNwLiM0jiM2HBHDUFagkmT8HBLtHiM3.CLv.CL1XyM0biLvHSLzfCMh.BQkwVX4QzX8HBLtXiMyjSN4jyMzbiL2XyLvXSL0HyLh.hTkYmTu8Va8HBLtLiMyjSN4jSNxXCL4.iLz.CM2fSMh.hTkYGQg0Fb8HBLtLCMv.CLv.CLyTyM1HyM3XCN1TiLh.hTkY2UkQWOh.iKz.yM4jSN4jiLybCL1.SMzXCN2TiHfHUY1cUZjQGZ8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HBLtHCMz.CLv.CLxbCMwfSLyXSM4XyMh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHv3BM0XCLv.CLv.iLyfCMwfSM2jSLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLt.iM3.CLv.CLyXSN0PCN2jyM1.yMh.hQrQmPPEUOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtHCMz.CLv.CLxbCMwfSLyXSM4XyMh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
 						}
 ,
 						"snapshotlist" : 						{
@@ -158,7 +398,7 @@
 										"isbase64" : 1,
 										"sliderorder" : [  ],
 										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3xL2LyMybCLvbyL2jSMyDCN1.yL0HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
+										"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nCUXjARL.................................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3BM4HCLv.CLwLSM3jCN0jCLvfyM4HBHGUlaBElajcWOh.iKwTSN4jSN4jiMzHyL2HSLyDyLzfiHfbTYtgTXx0la8HBLt.SLx.CLv.CLvDCLzLCL3DiL3LiMh.xQk4FQg0Fb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHv3BM4TSN4jSN4DCN4LyM1fyLw.SM0HBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKvHCMv.CLv.CLx.CN1DiMxTiM2DiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtM0XgwVY8HBLt.iL3.CLv.CLvfiMzHiM2LCM4HCMh.hSuk1bk8ja8HBLt.SLx.CLv.CLvDCLzLCL3DiL3LiMh.hSuk1bkYjbkEWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOh.iKvTiMv.CLv.SL2HCN0LCM1jCNzjiHfXDazwDTO4VOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtLCL3fCLv.SLwfyMyHCM0HyL4HiMh.hQrQGSPIUYy0iHv3xL1PCLv.CL0HiLwLiM1fCNxLiLzHBHFwFcHA0St0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iKvDiLv.CLv.CLw.CMy.CNwHCNyXiHfXDazgDTRU1b8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLtbyLwbCL2LyLzTSL3PyLxXSL2DSNh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtbiM3HSNy.iLyDCL4PyL1.yL0DiMh.RQtYWLRUFa8HBLtXSN0DiLwjCMyjSMvXSMy.yM1DyMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLtbCMyjCLxPCMzfyL4PyM2TyL4.iMh.RQtYmLDU1X8HBLtXSN0DiLx.CLyTSM0HSN2fSMwTiMh.RQtYmLSU2b8HBLtfSL2.yMxjCN2TSM1PSM2TSL4TyLh.RQtYmLRUFa8HBLtbyLwbCL2LyLzTSL3PyLxXSL2DSNh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3BMv.CLv.CLyTyM1HyM3XCN1TiLyHBHLY1awPTYv0iHv3RL4fSMyDSL4TSMxDyL0PiM2TiL4HBHLY1awLEZv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtPyL3LSN4fSMwLiLxDyMz.yMxHyMh.BSl8lLDUFb8HBLtfyM0jSN4fCL3LSLwPiMxPCLxLCMh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsESSuQVOh.iK3.CLv.CLvDSL4HCL4HCN4TSMvfiHfzTawPUXxcVYz0iHv3BLxTiMz.SN4jCN4fyLwPCM2XCLwHBHM0lLS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsISSuQVOh.iKzDiLv.CLv.CLzbiM3LyMwTCNx.iHfzTaxPUXxcVYz0iHv3xLvbiM4DSN4DyLxjSL4LSLwTiLyHBHM01LS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsMSSuQVOh.iK2PCLv.CLv.SN0LiM2PyLwXCMvXiHfzTayPUXxcVYz0iHv3RLvHSM1LSN4jSM4LiL0bSNvPCL0HBHM0FMS8VcxMVY8HBLt.yMwPiL3TSN1jyMyPSL4DCN4PSMh.RSsQSSuQVOh.iKzPCNv.CLvDyL3HCNxbyM0fyM3jiHfzTazPUXxcVYz0iHv3BL2XSNxLSLvHSLz.CMxXiMyTyMzHBHM0VMS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsUSSuQVOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3xLvbiM4DSN4DyLxjSL4LSLwTiLyHBHM0lMS8VcxMVY8HBLtHCN0bSLz.CLvPiMyPCN0bSL2byMh.RSsYSSuQVOh.iK0LiLv.CLv.SMxPSMx.CN2PCLxLiHfzTa1PUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM01MS8VcxMVY8HBLtDCMxfSM2.CLvHyLwbCMxfSM3fSNh.RSscSSuQVOh.iK4.yM4jSN4jiLybCL1.SMzXCN2TiHfzTa2PUXxcVYz0iHv3xL0fSN2PCLvjyM0HiL2LSM0jSM2HBHM0FNS8VcxMVY8HBLtDCMxfSM2.CLvHyLwbCMxfSM3fSNh.RSsgSSuQVOh.iKzTSL4jSN4jiLwLiLwfiM3fSN1TiHfzTa3PUXxcVYz0iHv3hL3HCL0.SN4bCLwfCNwPCL3XSNwHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKy.CLv.CLvDSL4HCL4HCN4TSMvfiHfTjYlU1XzISOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzMSOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hL3.CLv.CLvDSL4HCL4HCN4TSMwHBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3hLzPCLv.CLvHyMzDCNwLiM0jiM2HBHDUFagkmT8HBLtHiM3.CLv.CL1XyM0biLvHSLzfCMh.BQkwVX4QzX8HBLtXiMyjSN4jyMzbiL2XyLvXSL0HyLh.hTkYmTu8Va8HBLtLiMyjSN4jSNxXCL4.iLz.CM2fSMh.hTkYGQg0Fb8HBLtLCMv.CLv.CLyTyM1HyM3XCN1TiLh.hTkY2UkQWOh.iKz.yM4jSN4jiLybCL1.SMzXCN2TiHfHUY1cUZjQGZ8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HBLtHCMz.CLv.CLxbCMwfSLyXSM4XyMh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHv3BM0XCLv.CLv.iLyfCMwfSM2jSLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLt.iM3.CLv.CLyXSN0PCN2jyM1.yMh.hQrQmPPEUOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtHCMz.CLv.CLxbCMwfSLyXSM4XyMh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
 									}
 ,
 									"fileref" : 									{
@@ -189,7 +429,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1039.5, 285.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1065.5, 212.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -200,7 +440,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1039.5, 330.0, 47.0, 22.0 ],
+					"patching_rect" : [ 1065.5, 257.0, 47.0, 22.0 ],
 					"text" : "pack i f"
 				}
 
@@ -212,7 +452,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1039.5, 364.0, 81.0, 22.0 ],
+					"patching_rect" : [ 1065.5, 291.0, 81.0, 22.0 ],
 					"text" : "volume $1 $2"
 				}
 
@@ -224,7 +464,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1039.5, 150.0, 58.0, 22.0 ],
+					"patching_rect" : [ 1065.5, 96.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -236,7 +476,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1039.5, 189.0, 67.0, 22.0 ],
+					"patching_rect" : [ 1065.5, 135.0, 67.0, 22.0 ],
 					"text" : "volume 0.5"
 				}
 
@@ -247,7 +487,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 641.0, 493.0, 150.0, 20.0 ],
+					"patching_rect" : [ 645.0, 610.0, 150.0, 20.0 ],
 					"text" : "Asume Volume 0 - 1"
 				}
 
@@ -259,7 +499,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1039.5, 228.0, 78.0, 22.0 ],
+					"patching_rect" : [ 1065.5, 174.0, 78.0, 22.0 ],
 					"text" : "route volume"
 				}
 
@@ -296,7 +536,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 647.0, 520.0, 39.0, 22.0 ],
+					"patching_rect" : [ 651.0, 637.0, 39.0, 22.0 ],
 					"text" : "atodb"
 				}
 
@@ -443,7 +683,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 5,
 					"numoutlets" : 0,
-					"patching_rect" : [ 311.0, 784.0, 107.0, 22.0 ],
+					"patching_rect" : [ 315.0, 901.0, 107.0, 22.0 ],
 					"text" : "Spatializer.maxpat"
 				}
 
@@ -606,7 +846,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 311.0, 619.0, 48.0, 136.0 ],
+					"patching_rect" : [ 315.0, 736.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~[8]",
@@ -801,8 +1041,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-33", 0 ]
 				}
 
@@ -810,6 +1057,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
+					"order" : 1,
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-72", 0 ],
 					"order" : 0,
 					"source" : [ "obj-33", 0 ]
 				}
@@ -843,6 +1098,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-38", 0 ]
 				}
 
 			}
@@ -886,8 +1148,52 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 1 ],
 					"source" : [ "obj-48", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-49", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"order" : 1,
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"order" : 0,
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-51", 0 ]
 				}
 
 			}
@@ -900,8 +1206,175 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-54", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"order" : 2,
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-60", 0 ],
+					"order" : 1,
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-62", 0 ],
+					"order" : 0,
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-62", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-64", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-65", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-66", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"order" : 0,
+					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-66", 0 ],
+					"order" : 1,
+					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-69", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"order" : 0,
+					"source" : [ "obj-70", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"order" : 1,
+					"source" : [ "obj-70", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"order" : 5,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"order" : 4,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"order" : 3,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-55", 0 ],
+					"order" : 2,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"order" : 1,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-70", 0 ],
+					"order" : 0,
+					"source" : [ "obj-72", 0 ]
 				}
 
 			}
@@ -980,6 +1453,12 @@
 , 			{
 				"name" : "spat5.viewer.mxe64",
 				"type" : "mx64"
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ],
 		"autosave" : 0,
