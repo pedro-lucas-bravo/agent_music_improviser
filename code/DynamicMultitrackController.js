@@ -168,8 +168,8 @@ function addlooper(){
         this.patcher.connect(currentTrack, 0, gateSyntheParams, 0);
 
         /// Connect positions source to gate synthe params
-        var msg_volume = this.patcher.getnamed("msg_volume");
-        this.patcher.connect(msg_volume, 0, gateSyntheParams, 1);
+        var midi_controller = this.patcher.getnamed("midi_controller");
+        this.patcher.connect(midi_controller, 7, gateSyntheParams, 1);
 
         /// connect positions to controllers        
         var agentpos_unpack = this.patcher.getnamed("agentpos_unpack");        

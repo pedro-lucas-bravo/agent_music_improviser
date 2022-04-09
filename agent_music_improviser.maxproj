@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3731066474,
+	"modificationdate" : 3732336763,
 	"viewrect" : [ 871.0, 202.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -14,11 +14,6 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
-			}
-,
-			"AutonomousAnnMovement.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
 			}
 ,
 			"AutonomousMusicPerformer.maxpat" : 			{
@@ -66,6 +61,11 @@
 				"local" : 1
 			}
 ,
+			"AutonomousAnnMovement.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"AgentController.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -77,6 +77,11 @@
 			}
 ,
 			"SpatialAudioTest.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"PresetHandler.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

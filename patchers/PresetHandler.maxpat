@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 78.0, 1468.0, 713.0 ],
+		"rect" : [ 59.0, 106.0, 900.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,227 +40,13 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-24",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 773.5, 235.0, 234.0, 22.0 ],
-					"text" : "PresetHandler.maxpat data/soundgen_pre"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
+					"id" : "obj-43",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 917.5, 189.0, 72.0, 22.0 ],
-					"text" : "loadfrom $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-21",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 917.5, 155.0, 79.0, 22.0 ],
-					"text" : "route presets"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 437.0, 204.0, 210.0, 22.0 ],
-					"text" : "PresetHandler.maxpat data/soundgen"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"autosave" : 1,
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"id" : "obj-13",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 8,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 311.0, 481.0, 300.0, 100.0 ],
-					"save" : [ "#N", "vst~", "loaduniqueid", 0, "D:/VST/VST64/Tunefish/Tunefish4.dll", ";" ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_invisible" : 1,
-							"parameter_longname" : "vst~[1]",
-							"parameter_shortname" : "vst~[1]",
-							"parameter_type" : 3
-						}
-
-					}
-,
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 1,
-						"parameter_mappable" : 0
-					}
-,
-					"snapshot" : 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "snapshotlist",
-						"origin" : "vst~",
-						"type" : "list",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"pluginname" : "Tunefish4.dll",
-							"plugindisplayname" : "Tunefish4",
-							"pluginsavedname" : "D:/VST/VST64/Tunefish/Tunefish4.dll",
-							"pluginsaveduniqueid" : 0,
-							"version" : 1,
-							"isbank" : 0,
-							"isbase64" : 1,
-							"sliderorder" : [  ],
-							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3xL2LyMybCLvbyL2jSMyDCN1.yL0HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
-						}
-,
-						"snapshotlist" : 						{
-							"current_snapshot" : 0,
-							"entries" : [ 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "Tunefish4",
-									"origin" : "Tunefish4.dll",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"snapshot" : 									{
-										"pluginname" : "Tunefish4.dll",
-										"plugindisplayname" : "Tunefish4",
-										"pluginsavedname" : "D:/VST/VST64/Tunefish/Tunefish4.dll",
-										"pluginsaveduniqueid" : 0,
-										"version" : 1,
-										"isbank" : 0,
-										"isbase64" : 1,
-										"sliderorder" : [  ],
-										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3xL2LyMybCLvbyL2jSMyDCN1.yL0HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
-									}
-,
-									"fileref" : 									{
-										"name" : "Tunefish4",
-										"filename" : "Tunefish4.maxsnap",
-										"filepath" : "D:/MCT_master/THESIS/agent_music_improviser/data",
-										"filepos" : -1,
-										"snapshotfileid" : "611d40536a93609e24c33ac2d57048e4"
-									}
-
-								}
- ]
-						}
-
-					}
-,
-					"text" : "vst~ D:/VST/VST64/Tunefish/Tunefish4.dll",
-					"varname" : "vst~[1]",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-41",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1039.5, 285.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-37",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1039.5, 330.0, 47.0, 22.0 ],
-					"text" : "pack i f"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1039.5, 364.0, 81.0, 22.0 ],
-					"text" : "volume $1 $2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1039.5, 150.0, 58.0, 22.0 ],
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-14",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1039.5, 189.0, 67.0, 22.0 ],
-					"text" : "volume 0.5"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-36",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 641.0, 493.0, 150.0, 20.0 ],
-					"text" : "Asume Volume 0 - 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1039.5, 228.0, 78.0, 22.0 ],
-					"text" : "route volume"
+					"patching_rect" : [ 313.0, 146.0, 55.0, 22.0 ],
+					"text" : "loadfrom"
 				}
 
 			}
@@ -271,180 +57,44 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1072.5, 0.0, 97.0, 34.0 ],
-					"text" : "Synthe Control Msgs"
+					"patching_rect" : [ 168.0, 531.0, 150.0, 34.0 ],
+					"text" : "Output Message (load or write)"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Synthe Control Msgs",
-					"id" : "obj-33",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1099.5, 38.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"comment" : "Output Message (load or write)",
 					"id" : "obj-27",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 647.0, 520.0, 39.0, 22.0 ],
-					"text" : "atodb"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "note ID(trackId) List(pictch velocity)",
-					"id" : "obj-11",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 55.0, 475.0, 30.0, 30.0 ]
+					"patching_rect" : [ 126.0, 536.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-103",
+					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 71.166666666666686, 325.0, 47.0, 22.0 ],
-					"text" : "unpack"
+					"outlettype" : [ "bang", "int" ],
+					"patching_rect" : [ 313.0, 114.0, 29.5, 22.0 ],
+					"text" : "t b i"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-100",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 35.666666666666686, 324.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-96",
+					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 54.666666666666686, 372.0, 52.0, 22.0 ],
-					"text" : "pack i i i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-86",
-					"maxclass" : "message",
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 54.666666666666686, 414.0, 82.0, 22.0 ],
-					"text" : "note $1 $2 $3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-52",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 917.5, 0.0, 150.0, 34.0 ],
-					"text" : "Mode: 1 binaural, 2 Ambisonic"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "Mode: 1 binaural, 2 Ambisonic",
-					"id" : "obj-53",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 943.5, 38.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 797.5, 7.0, 107.0, 20.0 ],
-					"text" : "Spat Messages",
-					"textjustification" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "Spat Messages",
-					"id" : "obj-20",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 836.0, 29.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 673.0, 0.0, 101.0, 34.0 ],
-					"text" : "Position X Y Z in millimeters"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "List position XYZ In Millimetrs",
-					"id" : "obj-15",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 696.0, 38.0, 30.0, 30.0 ],
-					"varname" : "PositionXYZInMillimetrs"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 5,
-					"numoutlets" : 0,
-					"patching_rect" : [ 311.0, 784.0, 107.0, 22.0 ],
-					"text" : "Spatializer.maxpat"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 313.0, 80.0, 86.0, 22.0 ],
+					"text" : "route loadfrom"
 				}
 
 			}
@@ -454,7 +104,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 542.5, 7.0, 109.0, 20.0 ],
+					"patching_rect" : [ 273.5, 8.0, 109.0, 20.0 ],
 					"text" : "Snapshot msg",
 					"textjustification" : 1
 				}
@@ -464,12 +114,12 @@
 				"box" : 				{
 					"comment" : "Snapshot msg",
 					"id" : "obj-48",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 582.0, 29.0, 30.0, 30.0 ]
+					"patching_rect" : [ 313.0, 30.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -479,7 +129,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 397.5, 7.0, 109.0, 20.0 ],
+					"patching_rect" : [ 104.5, 8.0, 109.0, 20.0 ],
 					"text" : "Id",
 					"textjustification" : 1
 				}
@@ -489,313 +139,283 @@
 				"box" : 				{
 					"comment" : "ID",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 437.0, 29.0, 30.0, 30.0 ]
+					"patching_rect" : [ 144.0, 30.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
+					"id" : "obj-40",
+					"linecount" : 8,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 89.0, 35.0, 22.0 ],
-					"text" : "open"
+					"patching_rect" : [ 67.5, 360.0, 66.0, 119.0 ],
+					"text" : "write D:/MCT_master/THESIS/agent_music_improviser/data/soundgen4"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 271.5, 7.0, 109.0, 20.0 ],
-					"text" : "Open Synthe",
-					"textjustification" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "Open Synthe",
-					"id" : "obj-8",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 29.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 8,
-					"outlettype" : [ "", "", "", "int", "int", "", "int", "" ],
-					"patching_rect" : [ 45.666666666666686, 167.0, 92.5, 22.0 ],
-					"text" : "midiparse"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 142.5, 7.0, 109.0, 20.0 ],
-					"text" : "Midi Flush",
-					"textjustification" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "Midi Flush",
-					"id" : "obj-19",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.0, 29.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 10.5, 7.0, 109.0, 20.0 ],
-					"text" : "Notes on-off list",
-					"textjustification" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "Notes on-off list",
-					"id" : "obj-1",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 29.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-65",
-					"lastchannelcount" : 0,
-					"maxclass" : "live.gain~",
+					"id" : "obj-35",
+					"linecount" : 8,
+					"maxclass" : "message",
 					"numinlets" : 2,
-					"numoutlets" : 5,
-					"outlettype" : [ "signal", "signal", "", "float", "list" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 311.0, 619.0, 48.0, 136.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_longname" : "live.gain~[8]",
-							"parameter_mmax" : 6.0,
-							"parameter_mmin" : -70.0,
-							"parameter_shortname" : "live.gain~",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 4
-						}
-
-					}
-,
-					"varname" : "live.gain~"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 156.5, 360.0, 66.0, 119.0 ],
+					"text" : "read D:/MCT_master/THESIS/agent_music_improviser/data/soundgen4"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-10",
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 103.5, 264.0, 141.0, 22.0 ],
+					"text" : "route save load loadfrom"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 45.666666666666686, 128.0, 56.0, 22.0 ],
-					"text" : "midiflush"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 313.0, 176.0, 31.0, 22.0 ],
+					"text" : "t s b"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-9",
+					"id" : "obj-25",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 325.0, 223.0, 29.5, 22.0 ],
+					"text" : "4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
 					"maxclass" : "newobj",
-					"numinlets" : 7,
+					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 45.666666666666686, 89.0, 82.0, 22.0 ],
-					"text" : "midiformat",
-					"varname" : "midiinfo_out"
+					"outlettype" : [ "bang", "int" ],
+					"patching_rect" : [ 325.0, 264.0, 29.5, 22.0 ],
+					"text" : "t b i"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 187.5, 321.0, 49.0, 22.0 ],
+					"text" : "read $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-38",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 253.5, 429.0, 176.0, 22.0 ],
+					"text" : "combine path #1 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 253.5, 384.0, 79.0, 22.0 ],
+					"text" : "regexp (.*/).*/"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-24",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 253.5, 304.0, 34.0, 22.0 ],
+					"text" : "path"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 253.5, 343.0, 69.0, 22.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"text" : "thispatcher"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 98.5, 321.0, 51.0, 22.0 ],
+					"text" : "write $1"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-100", 0 ],
-					"order" : 2,
+					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-103", 0 ],
-					"order" : 0,
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"order" : 1,
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-25", 1 ],
+					"source" : [ "obj-10", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-43", 0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-96", 0 ],
-					"source" : [ "obj-100", 0 ]
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-96", 2 ],
-					"source" : [ "obj-103", 1 ]
+					"destination" : [ "obj-38", 2 ],
+					"source" : [ "obj-17", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-96", 1 ],
-					"source" : [ "obj-103", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-65", 1 ],
-					"source" : [ "obj-13", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 1 ],
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 4 ],
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-40", 1 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"source" : [ "obj-22", 7 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-23", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
+					"destination" : [ "obj-28", 0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-24", 1 ],
+					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-25", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-26", 0 ]
+					"destination" : [ "obj-31", 0 ],
+					"source" : [ "obj-28", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
-					"source" : [ "obj-27", 0 ]
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-29", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-31", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"source" : [ "obj-32", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"source" : [ "obj-32", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-35", 0 ]
 				}
 
 			}
@@ -803,186 +423,54 @@
 				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"order" : 1,
-					"source" : [ "obj-33", 0 ]
+					"source" : [ "obj-38", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
+					"destination" : [ "obj-51", 0 ],
 					"order" : 0,
-					"source" : [ "obj-33", 0 ]
+					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 1 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
-					"order" : 2,
-					"source" : [ "obj-34", 0 ]
+					"source" : [ "obj-40", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 1 ],
-					"order" : 0,
-					"source" : [ "obj-34", 0 ]
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-43", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
-					"order" : 1,
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
-					"source" : [ "obj-37", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"order" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"order" : 1,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-96", 0 ],
-					"order" : 2,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"source" : [ "obj-41", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"source" : [ "obj-42", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 1 ],
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-48", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 3 ],
-					"source" : [ "obj-53", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-65", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-86", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-86", 0 ],
-					"source" : [ "obj-96", 0 ]
+					"destination" : [ "obj-35", 1 ],
+					"source" : [ "obj-51", 0 ]
 				}
 
 			}
  ],
-		"parameters" : 		{
-			"obj-13" : [ "vst~[1]", "vst~[1]", 0 ],
-			"obj-65" : [ "live.gain~[8]", "live.gain~", 0 ],
-			"parameterbanks" : 			{
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "PresetHandler.maxpat",
-				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Spatializer.maxpat",
-				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Tunefish4.maxsnap",
-				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/data",
-				"patcherrelativepath" : "../data",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "spat5.binaural~.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "spat5.oper.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "spat5.spat~.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "spat5.viewer.mxe64",
-				"type" : "mx64"
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "11patcher",
 				"default" : 				{
