@@ -126,7 +126,7 @@ function addlooper(){
         }
         pluginSelector = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 50, "select", argsPluginselector);
         for(var i = 0; i < currentLooperIndex + 1; i++){
-            this.patcher.connect(pluginSelector, i, msgsOpen[i], 0);   
+            //this.patcher.connect(pluginSelector, i, msgsOpen[i], 0); //UNCOMMENT FOR AUTOMATIC PLUGIN OPEN  
         } 
         agentDataSelector = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin + 160, "select", argsAgentSelector);
         var fullagentpos_unpack = this.patcher.getnamed("fullagentpos_unpack");
