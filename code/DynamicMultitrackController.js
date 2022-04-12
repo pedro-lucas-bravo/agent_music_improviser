@@ -16,6 +16,8 @@ var gateSyntheParams;
 var gatemusicObj;
 var gatestopObj;
 var flushBangObj;
+var mcPackSpat;
+var multiSpatializer;
 
 var maxLoopers              = 128
 var loopers                 = new Array(maxLoopers);
@@ -89,6 +91,8 @@ function addlooper(){
             this.patcher.remove(gatemusicObj);
             this.patcher.remove(gatestopObj);
             this.patcher.remove(flushBangObj);
+            this.patcher.remove(mcPackSpat);
+            this.patcher.remove(multiSpatializer);
         }
 
         gateLoopers = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin - 80, "gate", currentLooperIndex + 2);
@@ -115,6 +119,12 @@ function addlooper(){
         this.patcher.connect(msgSpBinaural, 0, soundGens[currentLooperIndex], 7);
         this.patcher.connect(msgSpAmbisonic, 0, soundGens[currentLooperIndex], 7);
         this.patcher.connect(soundGens[currentLooperIndex], 0, agentController, 0);
+
+        mcPackSpat = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin + 360, "mc.pack~ " + (currentLooperIndex + 1));        
+        multiSpatializer = this.patcher.newdefault(baseLeftMargin + currentLooperIndex * looperBoxLength * 0.5, baseTopMargin + 400, "MultiSpatializer.maxpat " + (currentLooperIndex + 1));        
+        this.patcher.connect(mcPackSpat, 0, multiSpatializer, 0);
+        
+        this.patcher.remove(flushBangObj);
 
 
         //Instance pluginSelector
@@ -177,13 +187,7 @@ function addlooper(){
         var agentpos_unpack = this.patcher.getnamed("agentpos_unpack");        
         this.patcher.connect(agentpos_unpack, 0, msgsAgentPosition[currentLooperIndex], 1);
 
-        /// Connect          
-
-        //Bang for choosing the current track
-        currentTrack.message("bang");
-        
-        //Bang for choosing binaural render
-        msgSpBinaural.message("bang");
+        /// Connect                
 
         //From autonomous behaviour
         var gatemusic_0 = this.patcher.getnamed("gatemusic_0");
@@ -217,8 +221,18 @@ function addlooper(){
             this.patcher.connect(gatemusicObj, i, sendsLooper[i], 0);
             this.patcher.connect(gatestopObj, i, sendsLooper[i], 0);
             this.patcher.connect(flushBangObj, 0, soundGens[i],1);
+            this.patcher.connect(soundGens[i], 1, mcPackSpat, i);//Signal
+            this.patcher.connect(soundGens[i], 2, multiSpatializer, 1);//Source number
+            this.patcher.connect(soundGens[i], 3, multiSpatializer, 2);//Position
+            this.patcher.connect(soundGens[i], 5, multiSpatializer, 4);//Mode
+            this.patcher.connect(soundGens[i], 4, multiSpatializer, 5);//Spat Msgs
         } 
         
+         //Bang for choosing the current track
+         currentTrack.message("bang");
+        
+         //Bang for choosing binaural render
+         msgSpBinaural.message("bang");
 
     }else{
         post("Cannot create more than " +maxLoopers+ " loopers.")
@@ -262,6 +276,8 @@ function removeallloopers(){
     this.patcher.remove(gatemusicObj);
     this.patcher.remove(gatestopObj);
     this.patcher.remove(flushBangObj);
+    this.patcher.remove(mcPackSpat);
+    this.patcher.remove(multiSpatializer);
     currentLooperIndex = -1;
     gc();
 }

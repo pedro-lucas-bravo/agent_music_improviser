@@ -182,7 +182,7 @@ function GenerateColors(){
         agents[i].color.y = toOne == 1 ? 1.0 : (toZero == 1 ? 0 : toRand);
         agents[i].color.z = toOne == 2 ? 1.0 : (toZero == 2 ? 0 : toRand);
         outlet(3, i + 1);
-        outlet(3, ["/source/1/color", agents[i].color.x, agents[i].color.y, agents[i].color.z, 1.0]);
+        outlet(3, ["/source/"+(i+1)+"/color", agents[i].color.x, agents[i].color.y, agents[i].color.z, 1.0]);
     }
 }
 

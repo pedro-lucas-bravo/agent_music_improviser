@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3732336763,
+	"modificationdate" : 3732597259,
 	"viewrect" : [ 871.0, 202.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -17,21 +17,6 @@
 			}
 ,
 			"AutonomousMusicPerformer.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"ClockClick.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"LoopSynchronizer.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"Looper.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -51,7 +36,27 @@
 				"local" : 1
 			}
 ,
+			"ClockClick.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"LoopSynchronizer.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"Looper.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"SoundGenerator.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"PresetHandler.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -81,7 +86,12 @@
 				"local" : 1
 			}
 ,
-			"PresetHandler.maxpat" : 			{
+			"MultiSpatializer.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"SourcesPositionHandler.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -114,17 +124,17 @@
 				"local" : 1
 			}
 ,
+			"NonRepeatInput.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"LoopCrossLimits.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
 			"LooperDictHandler.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"NonRepeatInput.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
