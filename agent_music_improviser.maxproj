@@ -2,7 +2,7 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3732597259,
+	"modificationdate" : 3733373532,
 	"viewrect" : [ 871.0, 202.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -16,12 +16,12 @@
 				"toplevel" : 1
 			}
 ,
-			"AutonomousMusicPerformer.maxpat" : 			{
+			"PositionSensor.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"MIDI_Length.maxpat" : 			{
+			"AutonomousMusicPerformer.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -31,7 +31,7 @@
 				"local" : 1
 			}
 ,
-			"PositionSensor.maxpat" : 			{
+			"MIDI_Length.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -95,21 +95,16 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"EventRecorder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
 		"code" : 		{
-			"AgentController.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"AgentSwarmBehaviour.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"MultipleMarkovManager.js" : 			{
+			"DynamicMultitrackController.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -119,7 +114,17 @@
 				"local" : 1
 			}
 ,
-			"DynamicMultitrackController.js" : 			{
+			"AgentController.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"MultipleMarkovManager.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"AgentSwarmBehaviour.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

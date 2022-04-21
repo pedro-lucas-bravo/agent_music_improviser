@@ -31,6 +31,11 @@ var msgsAgentPosition       = new Array(maxLoopers);
 var msgsOpenSpat            = new Array(maxLoopers);
 var receivesLooper          = new Array(maxLoopers);
 var sendsLooper             = new Array(maxLoopers);
+
+var msgsTrackN_rec          = new Array(maxLoopers);
+var trigger_rec             = new Array(maxLoopers);
+var join_rec             = new Array(maxLoopers);
+
 var currentLooperIndex      = -1;
 var baseLeftMargin          = 670;
 var baseTopMargin           = 500;
@@ -45,6 +50,10 @@ function addlooper(){
         soundGens[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 320, "SoundGenerator.maxpat");        
         msgsTrackN[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 40, 30, 10);
         msgsTrackN[currentLooperIndex].set(currentLooperIndex);
+        msgsTrackN_rec[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength) + 30, baseTopMargin + 40, 30, 10);
+        msgsTrackN_rec[currentLooperIndex].set(currentLooperIndex);
+        trigger_rec[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength) + 30, baseTopMargin + 40 + 20, "t b l");
+        join_rec[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength) + 30, baseTopMargin + 40 + 40, "zl.join");
         //msgsOpen[currentLooperIndex] = this.patcher.newdefault(baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 80, "message");
         msgsOpen[currentLooperIndex] = this.patcher.newobject("message", baseLeftMargin+(currentLooperIndex*looperBoxLength), baseTopMargin + 120, 35, 10);
         msgsOpen[currentLooperIndex].set("open");
@@ -70,6 +79,14 @@ function addlooper(){
         //this.patcher.connect(agentDataSelector[currentLooperIndex], 0, msgsAgentPosition[currentLooperIndex], 0);
         this.patcher.connect(msgsAgentPosition[currentLooperIndex], 0, soundGens[currentLooperIndex], 5);
         this.patcher.connect(msgsOpenSpat[currentLooperIndex], 0, soundGens[currentLooperIndex], 6);
+
+        this.patcher.connect(loopers[currentLooperIndex], 2, trigger_rec[currentLooperIndex], 0);   
+        this.patcher.connect(trigger_rec[currentLooperIndex], 0, msgsTrackN_rec[currentLooperIndex], 0);   
+        this.patcher.connect(trigger_rec[currentLooperIndex], 1, join_rec[currentLooperIndex], 1);   
+        this.patcher.connect(msgsTrackN_rec[currentLooperIndex], 0, join_rec[currentLooperIndex], 0);
+        var recorder_looper = this.patcher.getnamed("recorder_looper");
+        this.patcher.connect(join_rec[currentLooperIndex], 0, recorder_looper , 0);
+           
 
         msgsTrackN[currentLooperIndex].message("bang");
         msgsLoad[currentLooperIndex].message("bang");
@@ -260,6 +277,10 @@ function removeallloopers(){
         //this.patcher.remove(agentDataSelector[i]);
         this.patcher.remove(msgsAgentPosition[i]);
         this.patcher.remove(msgsOpenSpat[i]);
+
+        this.patcher.remove(msgsTrackN_rec[i]);
+        this.patcher.remove(trigger_rec[i]);
+        this.patcher.remove(join_rec[i]);
     }
     this.patcher.remove(gateLoopers);
     this.patcher.remove(gatePositions);
