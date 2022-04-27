@@ -70,7 +70,7 @@ function addlooper(){
         
         this.patcher.connect(receivesLooper[currentLooperIndex], 0, loopers[currentLooperIndex], 0);
         this.patcher.connect(loopers[currentLooperIndex], 0, soundGens[currentLooperIndex], 0);
-        this.patcher.connect(loopers[currentLooperIndex], 1, soundGens[currentLooperIndex], 1);
+        this.patcher.connect(loopers[currentLooperIndex], 1, soundGens[currentLooperIndex], 1);//midiflush generator
         this.patcher.connect(msgsOpen[currentLooperIndex], 0, soundGens[currentLooperIndex], 2);   
         this.patcher.connect(msgsTrackN[currentLooperIndex], 0, soundGens[currentLooperIndex], 3);             
         this.patcher.connect(msgsSave[currentLooperIndex], 0, soundGens[currentLooperIndex], 4);        

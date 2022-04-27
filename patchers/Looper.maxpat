@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 2,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 84.0, 871.0, 699.0 ],
+		"rect" : [ 165.0, 84.0, 871.0, 699.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 572.0, 453.0, 108.0, 34.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Only Looped output",
 					"textjustification" : 1
 				}
@@ -56,7 +55,7 @@
 				"box" : 				{
 					"comment" : "Only Loop Out",
 					"id" : "obj-1",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -83,16 +82,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 418.0, 453.0, 108.0, 20.0 ],
-					"text" : "Bang Loop point",
+					"text" : "Flush point",
 					"textjustification" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Bang Loop point",
+					"comment" : "Flush point",
 					"id" : "obj-7",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -116,7 +115,7 @@
 				"box" : 				{
 					"comment" : "Control Messages",
 					"id" : "obj-55",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -141,7 +140,7 @@
 				"box" : 				{
 					"comment" : "Looped Output",
 					"id" : "obj-51",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -420,13 +419,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-26", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-27", 0 ]
 				}
@@ -504,7 +496,50 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "ClockClick.maxpat",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "HeldNotesChecker.js",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "LoopCrossLimits.js",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "LoopSynchronizer.maxpat",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "LooperDictHandler.js",
+				"bootpath" : "D:/MCT_master/THESIS/agent_music_improviser/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "openTransport.maxpat",
+				"bootpath" : "C74:/help/max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
