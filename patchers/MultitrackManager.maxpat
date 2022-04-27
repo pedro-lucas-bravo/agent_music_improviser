@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
+		"rect" : [ 34.0, 77.0, 1099.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 177.500000000000114, 952.0, 29.5, 22.0 ],
+					"patching_rect" : [ 183.500000000000057, 952.0, 29.5, 22.0 ],
 					"text" : "-21"
 				}
 
@@ -1780,7 +1780,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1488.75, 240.0, 95.0, 36.0 ],
-					"text" : "1019011.1874 looper 3 55 83"
+					"text" : "1405332.924 looper 3 64 0"
 				}
 
 			}
@@ -1877,7 +1877,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 734.0, 1497.0, 79.0, 50.0 ],
-					"text" : "1067951.7479 markov 1 60 0"
+					"text" : "1413596.0466 markov 3 57 0"
 				}
 
 			}
@@ -1889,7 +1889,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 714.5, 1389.0, 50.0, 22.0 ],
-					"text" : "1"
+					"text" : "3"
 				}
 
 			}
@@ -1950,7 +1950,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1652.0, 166.0, 122.0, 36.0 ],
-					"text" : "1098046.4649 midicontroller 63 0"
+					"text" : "4137697.7228 midicontroller 66 0"
 				}
 
 			}
@@ -2618,7 +2618,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 851.5, 1308.0, 50.0, 22.0 ],
-					"text" : "60 0"
+					"text" : "57 0"
 				}
 
 			}
@@ -3153,7 +3153,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 259.833333333333258, 620.0, 168.0, 50.0 ],
-					"text" : "/agent/instance 4 0 00ff00 0.5 0 7f00ff 0.5 0 ffbf00 0.5 0 0000ff 0.5"
+					"text" : "/agent/instance 4 0 00ff3f 0.433071 0 3f00ff 0.5 0 7fff00 0.5 0 0000ff 0.330709"
 				}
 
 			}
@@ -3165,7 +3165,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 459.5, 580.0, 164.5, 22.0 ],
-					"text" : "instanceExternalAgents 4"
+					"text" : "instanceExternalAgents 5"
 				}
 
 			}
@@ -3223,7 +3223,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 252.75, 682.5, 188.0, 22.0 ],
-					"text" : "/source/99/color 1 0 0.25 1"
+					"text" : "/source/99/color 0 0.75 1 1"
 				}
 
 			}
@@ -5866,7 +5866,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 364.0, 96.0, 50.0, 22.0 ],
-									"text" : "26 107"
+									"text" : "1 0"
 								}
 
 							}
@@ -7304,7 +7304,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 87.000000000000114, 952.0, 81.0, 22.0 ],
+					"patching_rect" : [ 98.166666666666686, 952.0, 81.0, 22.0 ],
 					"text" : "loadmess -21"
 				}
 

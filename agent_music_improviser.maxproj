@@ -2,8 +2,8 @@
 	"name" : "agent_music_improviser",
 	"version" : 1,
 	"creationdate" : 3727937833,
-	"modificationdate" : 3733887215,
-	"viewrect" : [ 871.0, 202.0, 300.0, 500.0 ],
+	"modificationdate" : 3733889882,
+	"viewrect" : [ 922.0, 202.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -102,6 +102,11 @@
 			}
 ,
 			"MultiSpatializer2.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"SpatBypassCommands.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
