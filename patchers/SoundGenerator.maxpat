@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 1,
+			"minor" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 27.0, 84.0, 1118.0, 713.0 ],
+		"rect" : [ 41.0, 84.0, 1076.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-74",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 259.0, 553.0, 31.0, 22.0 ],
+					"text" : "plug"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-73",
 					"maxclass" : "message",
@@ -104,7 +116,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 922.5, 904.0, 150.0, 34.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Mode: 1 binaural, 2 Ambisonic"
 				}
 
@@ -129,7 +140,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 678.0, 904.0, 101.0, 34.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Position X Y Z in millimeters"
 				}
 
@@ -201,7 +211,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 523.0, 150.0, 34.0 ],
+					"patching_rect" : [ 31.0, 523.0, 152.0, 34.0 ],
 					"text" : "note ID(trackId) List(pictch velocity)"
 				}
 
@@ -501,12 +511,13 @@
 					"border" : 0,
 					"clickthrough" : 0,
 					"id" : "obj-13",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 315.0, 598.0, 300.0, 100.0 ],
+					"patching_rect" : [ 315.0, 598.0, 222.0, 55.0 ],
 					"save" : [ "#N", "vst~", "loaduniqueid", 0, "D:/VST/VST64/Tunefish/Tunefish4.dll", ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -533,16 +544,16 @@
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
-							"pluginname" : "Tunefish4.vstinfo",
+							"pluginname" : "Tunefish4.dll",
 							"plugindisplayname" : "Tunefish4",
-							"pluginsavedname" : "D:/VST/VST64/Tunefish/Tunefish4.dll",
+							"pluginsavedname" : "~/Documents/Repositories/agent_music_improviser/vst/Tunefish4.dll",
 							"pluginsaveduniqueid" : 0,
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
 							"sliderorder" : [  ],
 							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3hM4jiLxTyLvXSMw.SNxTiL4HSN2HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
+							"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3xL2LyMybCLvbyL2jSMyDCN1.yL0HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
 						}
 ,
 						"snapshotlist" : 						{
@@ -552,21 +563,21 @@
 									"version" : 2,
 									"minorversion" : 0,
 									"name" : "Tunefish4",
-									"origin" : "Tunefish4.vstinfo",
+									"origin" : "Tunefish4.dll",
 									"type" : "VST",
 									"subtype" : "Instrument",
 									"embed" : 1,
 									"snapshot" : 									{
-										"pluginname" : "Tunefish4.vstinfo",
+										"pluginname" : "Tunefish4.dll",
 										"plugindisplayname" : "Tunefish4",
-										"pluginsavedname" : "D:/VST/VST64/Tunefish/Tunefish4.dll",
+										"pluginsavedname" : "~/Documents/Repositories/agent_music_improviser/vst/Tunefish4.dll",
 										"pluginsaveduniqueid" : 0,
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
 										"sliderorder" : [  ],
 										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3hM4jiLxTyLvXSMw.SNxTiL4HSN2HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
+										"blob" : "3819.CMlaKA....fQPMDZ....APkYyQC.DH....v.nOUXgEVX2A...............................3vqVMjLgXpC...OTYDMSUDUTkjSGMEHGEVZt0iHv3xL2LyMybCLvbyL2jSMyDCN1.yL0HBHGUlaBElajcWOh.iK4TSN0jSM4bCNxXCLvPCLxfyLx.iHfbTYtgTXx0la8HBLtjSM4TSN0jyM3HiMv.CMvHCNyHCLh.xQk4FQg0Fb8HBLt.SNvjCL4DCLw.iM3jyMyTCMwHiMh.xQk4VSuQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtY0ar0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHGUlaPEla8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41Tr8Fb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.xQk41SiQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtcDaoQVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYzQTYz4VOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfbTYtYjbkEWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtA0arkWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtQjboYWOh.iKw.SLvDCLv.iLwjSM3LSMwDyL0LiHfbTYtUkaoMWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfbTYtMEbxQVOh.iKzfCM3PyM4jiL1TCN1DSMwDiLy.iHfbTYtM0XgwVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bk8ja8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hSuk1bkYjbkEWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf3zaoMWYBcWOhDiKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazwDTCUGc8HBLtDCLv.CLv.CLwPSNvDSL1DSL4LCNh.hQrQGSPIUYy0iHv3RLv.CLv.CLvDCM4.SLwXSLwjyL3HBHFwFcHA0St0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFwFcHA0P0QWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazgDTRU1b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYWLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYWLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLAQGc8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLDU1X8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLSU2b8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQtYmLRUFa8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.RQtYmLSwFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8VLREFck0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awPTYv0iHv3RMv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLEZv0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHLY1awLUdtMVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfvjYuIiTgQWY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLDUFb8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSgFb8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BSl8lLSkmai0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLS8VcxMVY8HBLtHSLzHCN0jSN4TyL1TSLzHCNxHyLh.RSsESSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTawPUXxcVYz0iHv3RLxfiLvTCLvDyL0PiLwbSMxjyLvHBHM0lLS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsISSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTaxPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01LS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsMSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTayPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsQSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTazPUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsUSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa0PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0lMS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsYSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa1PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM01MS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSscSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa2PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0FNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsgSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa3PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VNS8VcxMVY8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSskSSuQVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfzTa4PUXxcVYz0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHM0VLvL0a0I2X8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLM8FY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RSsECLTElbmUVOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzESOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfTjYlU1XzISOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzMSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzQSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzUSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzYSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzcSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzgSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzkSOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfTjYlU1XzECL8HBLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.BQoMGcA0laz0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHCglbyIUXzUVOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfLDZxMGQkAWOh.iKx.CLv.CLv.iL4fCLxLiLxLCN2biHfPTYrEVdL0iHv3xL0LSMyPSN4XSMvjSM0HCLvDSN0HBHDUFagkmT8HBLtLiLyHyLwjSN0DCL0bCMyPCL3HCLh.BQkwVX4QzX8HBLtTiL0HSMxjSN2fyM0HSLyXiLy.SMh.hTkYmTu8Va8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkYGQg0Fb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hTkY2UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfHUY1cUZjQGZ8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrElamwjYu0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtclQxUVb8HBLtHCLv.CLv.CLxjCNvHyLxHyL3byMh.hQrElamETav0iHv3hLv.CLv.CLvHSN3.iLyHiLyfyM2HBHFwVXtc1UkQWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfLDZxM2Qgkla8HRLt.CLv.CLv.CLv.CLv.CLv.CLv.CLh.hQx0FcTkGbk0iHv3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHFIWazcUYz0iHw3BLv.CLv.CLv.CLv.CLv.CLv.CLvHBHEEGSucWOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfTTbMkFY8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.RQwgTZmgVOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0U0AWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHf7zbiA0UjcWOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDazIDTCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmPPEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUO4VOh.iKv.CLv.CLv.CLv.CLv.CLv.CLv.iHfXDaz4DUCUGc8HBLtTCLv.CLv.CLv.CLv.CLv.CLv.CLh.hQrQmSTEUOh.iK0.CLv.CLv.CLv.CLv.CLv.CLv.iHu3C."
 									}
 ,
 									"fileref" : 									{
@@ -574,7 +585,7 @@
 										"filename" : "Tunefish4_20220412.maxsnap",
 										"filepath" : "~/Documents/MCT_Master/THESIS/agent_music_improviser/data",
 										"filepos" : -1,
-										"snapshotfileid" : "5a059a0e221fc0aa085ed0baf49eb1c8"
+										"snapshotfileid" : "43403b55b24b07370d49999c92dfdff4"
 									}
 
 								}
@@ -1573,6 +1584,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-74", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
@@ -1611,15 +1629,8 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "Tunefish4_20220412.maxsnap",
-				"bootpath" : "~/Documents/MCT_Master/THESIS/agent_music_improviser/data",
-				"patcherrelativepath" : "../data",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "PresetHandler.maxpat",
-				"bootpath" : "~/Documents/MCT_Master/THESIS/agent_music_improviser/patchers",
+				"bootpath" : "~/Documents/Repositories/agent_music_improviser/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1635,20 +1646,20 @@
 		"styles" : [ 			{
 				"name" : "11patcher",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"accentcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 						"color2" : [ 0.4478, 0.484701, 0.47346, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "gradient"
 					}
 ,
-					"accentcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
 					"patchlinecolor" : [ 0.32549, 0.345098, 0.372549, 0.94 ],
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1657,23 +1668,23 @@
 , 			{
 				"name" : "11patcher-1",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"accentcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+					"bgcolor" : [ 0.984314, 0.976471, 0.976471, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 						"color2" : [ 0.4478, 0.484701, 0.47346, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "gradient"
 					}
 ,
-					"accentcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
 					"fontface" : [ 1 ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.32549, 0.345098, 0.372549, 0.94 ],
-					"bgcolor" : [ 0.984314, 0.976471, 0.976471, 1.0 ],
-					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1683,13 +1694,13 @@
 				"name" : "AudioStatus_Menu",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.294118, 0.313726, 0.337255, 1 ],
 						"color1" : [ 0.454902, 0.462745, 0.482353, 0.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "color"
 					}
 
 				}
@@ -1701,12 +1712,12 @@
 				"name" : "Audiomix",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -1726,16 +1737,16 @@
 , 			{
 				"name" : "Custom Default-1",
 				"newobj" : 				{
-					"fontsize" : [ 10.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontface" : [ 1 ],
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"message" : 				{
+					"fontface" : [ 1 ],
 					"fontsize" : [ 10.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"fontface" : [ 1 ]
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1744,16 +1755,16 @@
 , 			{
 				"name" : "Custom Default-2",
 				"newobj" : 				{
-					"fontsize" : [ 10.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontface" : [ 1 ],
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"message" : 				{
+					"fontface" : [ 1 ],
 					"fontsize" : [ 10.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"fontface" : [ 1 ]
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1762,10 +1773,10 @@
 , 			{
 				"name" : "Custom Default-3",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontface" : [ 1 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1774,10 +1785,10 @@
 , 			{
 				"name" : "Custom Default-4",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontface" : [ 1 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1786,10 +1797,10 @@
 , 			{
 				"name" : "Custom Default-5",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontface" : [ 1 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1807,8 +1818,8 @@
 , 			{
 				"name" : "Default M4L",
 				"default" : 				{
-					"fontsize" : [ 11.0 ],
 					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 11.0 ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ]
 				}
 ,
@@ -1818,8 +1829,8 @@
 , 			{
 				"name" : "Default M4L Poletti",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
 					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ]
 				}
 ,
@@ -1829,8 +1840,8 @@
 , 			{
 				"name" : "Default M4L Poletti-1",
 				"default" : 				{
-					"fontsize" : [ 11.0 ],
 					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 11.0 ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ]
 				}
 ,
@@ -1840,18 +1851,18 @@
 , 			{
 				"name" : "Default M4L-1",
 				"default" : 				{
-					"fontsize" : [ 11.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 ,
+					"fontface" : [ 1 ],
 					"fontname" : [ "Arial" ],
-					"fontface" : [ 1 ]
+					"fontsize" : [ 11.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1861,12 +1872,12 @@
 				"name" : "Default Max7 Poletti",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -1877,23 +1888,23 @@
 , 			{
 				"name" : "Luca",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"color2" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "gradient"
 					}
 ,
-					"fontname" : [ "Open Sans Semibold" ],
-					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
-					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
+					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
 					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
-					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ]
+					"fontname" : [ "Open Sans Semibold" ],
+					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1902,8 +1913,8 @@
 , 			{
 				"name" : "M4L 10 Bold",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
 					"fontface" : [ 1 ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.25 ]
 				}
 ,
@@ -1923,18 +1934,18 @@
 , 			{
 				"name" : "Manuel-11B",
 				"default" : 				{
-					"fontsize" : [ 11.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 ,
+					"fontface" : [ 1 ],
 					"fontname" : [ "Arial" ],
-					"fontface" : [ 1 ]
+					"fontsize" : [ 11.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1943,8 +1954,8 @@
 , 			{
 				"name" : "Matt",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
-					"fontface" : [ 1 ]
+					"fontface" : [ 1 ],
+					"fontsize" : [ 10.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -1959,12 +1970,12 @@
 				"name" : "Max 12 Regular-1",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -1981,12 +1992,12 @@
 				"name" : "Max 12 Regular-1-1-1",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2003,12 +2014,12 @@
 				"name" : "Max 12 Regular-1-1-1-1-1",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2020,12 +2031,12 @@
 				"name" : "Max 12 Regular-1-1-1-2",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2037,12 +2048,12 @@
 				"name" : "Max 12 Regular-1-1-2",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2054,12 +2065,12 @@
 				"name" : "Max 12 Regular-1-1-3",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2076,12 +2087,12 @@
 				"name" : "Max 12 Regular-1-2",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2108,12 +2119,12 @@
 				"name" : "Max 12 Regular-1-4",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2125,12 +2136,12 @@
 				"name" : "Max 12 Regular-2",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2142,12 +2153,12 @@
 				"name" : "Max 12 Regular-3",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2164,12 +2175,12 @@
 				"name" : "Max 12 Regular-4-1",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2181,12 +2192,12 @@
 				"name" : "Max 12 Regular-4-2",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2198,12 +2209,12 @@
 				"name" : "Max 12 Regular-5",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
@@ -2228,23 +2239,23 @@
 , 			{
 				"name" : "WTF",
 				"default" : 				{
-					"fontsize" : [ 18.0 ],
+					"accentcolor" : [ 0.50764, 0.065317, 0.112129, 1.0 ],
+					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "gradient"
 					}
 ,
-					"fontname" : [ "HydrogenType" ],
-					"accentcolor" : [ 0.50764, 0.065317, 0.112129, 1.0 ],
-					"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
-					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
+					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
 					"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ],
-					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ]
+					"fontname" : [ "HydrogenType" ],
+					"fontsize" : [ 18.0 ],
+					"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2253,22 +2264,22 @@
 , 			{
 				"name" : "classic",
 				"default" : 				{
-					"fontsize" : [ 9.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"accentcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
 						"color1" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "color"
 					}
 ,
+					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"fontname" : [ "Geneva" ],
-					"accentcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"fontsize" : [ 9.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
-					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2322,10 +2333,10 @@
 , 			{
 				"name" : "classicKslider",
 				"default" : 				{
-					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2334,8 +2345,8 @@
 , 			{
 				"name" : "classicLed",
 				"default" : 				{
-					"elementcolor" : [ 0.6, 0.0, 0.0, 1.0 ],
-					"color" : [ 1.0, 0.0, 0.0, 1.0 ]
+					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
+					"elementcolor" : [ 0.6, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2363,9 +2374,9 @@
 , 			{
 				"name" : "classicNodes",
 				"default" : 				{
-					"fontsize" : [ 9.0 ],
+					"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
 					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
-					"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ]
+					"fontsize" : [ 9.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2420,8 +2431,8 @@
 , 			{
 				"name" : "classicTab",
 				"default" : 				{
-					"elementcolor" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
-					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"elementcolor" : [ 0.839216, 0.839216, 0.839216, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2440,8 +2451,8 @@
 , 			{
 				"name" : "classicToggle",
 				"default" : 				{
-					"elementcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ],
-					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ]
+					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ],
+					"elementcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2459,8 +2470,8 @@
 , 			{
 				"name" : "classicWaveform~",
 				"default" : 				{
-					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 0.5 ],
-					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ]
+					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ],
+					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 0.5 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2469,16 +2480,16 @@
 , 			{
 				"name" : "dark-night-patch",
 				"default" : 				{
+					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 ,
-					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
 					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
@@ -2489,17 +2500,17 @@
 , 			{
 				"name" : "jbb",
 				"default" : 				{
-					"fontsize" : [ 9.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 ,
-					"fontname" : [ "Arial" ]
+					"fontname" : [ "Arial" ],
+					"fontsize" : [ 9.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2513,18 +2524,18 @@
 , 			{
 				"name" : "jpatcher002",
 				"default" : 				{
-					"fontsize" : [ 9.5 ],
-					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "color"
 					}
 ,
+					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
 					"fontname" : [ "Ableton Sans Book" ],
+					"fontsize" : [ 9.5 ],
 					"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ]
 				}
 ,
@@ -2534,24 +2545,24 @@
 , 			{
 				"name" : "jpink",
 				"default" : 				{
-					"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-					"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "color"
 					}
 ,
-					"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+					"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 					"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"color" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+					"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
+					"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2624,8 +2635,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2634,8 +2645,8 @@
 , 			{
 				"name" : "newobjYellow-2",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2653,8 +2664,8 @@
 , 			{
 				"name" : "purple",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ]
+					"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ],
+					"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2691,9 +2702,9 @@
 , 			{
 				"name" : "stb001",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
+					"fontface" : [ 1 ],
 					"fontname" : [ "Arial Bold" ],
-					"fontface" : [ 1 ]
+					"fontsize" : [ 10.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2722,8 +2733,8 @@
 				"name" : "tastefultoggle",
 				"default" : 				{
 					"bgcolor" : [ 0.287863, 0.333333, 0.329398, 1.0 ],
-					"elementcolor" : [ 0.654902, 0.572549, 0.376471, 1.0 ],
-					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ]
+					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+					"elementcolor" : [ 0.654902, 0.572549, 0.376471, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2732,8 +2743,8 @@
 , 			{
 				"name" : "test",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
-					"fontface" : [ 1 ]
+					"fontface" : [ 1 ],
+					"fontsize" : [ 10.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2742,11 +2753,11 @@
 , 			{
 				"name" : "whitey",
 				"default" : 				{
-					"fontsize" : [ 36.0 ],
-					"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"selectioncolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
 					"fontname" : [ "Dirty Ego" ],
-					"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ]
+					"fontsize" : [ 36.0 ],
+					"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
+					"selectioncolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
+					"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
