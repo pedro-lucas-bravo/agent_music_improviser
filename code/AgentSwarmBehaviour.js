@@ -57,7 +57,8 @@ function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
         //Save position in variable
         agentsMovement[agentId].position.x = currentX;
         agentsMovement[agentId].position.y = currentY;
-        agentsMovement[agentId].position.z = currentZ + Math.random()* (0.5 * 2);
+        //agentsMovement[agentId].position.z = currentZ;
+        agentsMovement[agentId].position.z = gazePos.z /*currentZ*/  + (-0.3 + Math.random()* 1.3); // currentZ was changed by gaze position in Z, also range is between -0.3 and 1.0
         agentsMovement[agentId].direction = Math.random() > 0.5 ? 1 : -1;
         post("set");
     }
@@ -80,11 +81,15 @@ function MoveAgentSwarm(agentId, deltaTime, currentX, currentY, currentZ){
 
     var div = size <= 1 ? 2.0 : 3.0;
     var ptarget = currentGazeDir.add(px.add(agent.position)).divide(div);
+    //ptarget.z = agent.position.z; // Set Z to the initial random value
+    zOffset = 0.10;
+    ptarget.z += zOffset;
     //post(agent.position.x);
     //Do a kind of smooth damp (TO DO)
 
     //Sent result
     outlet(0, ["agentpos", agentId, ptarget.x, ptarget.y, ptarget.z]); 
+    //outlet(0, ["agentpos", agentId, agent.position.x, agent.position.y, agent.position.z]); 
 }
 
 //Just for receivent when request to movement module
